@@ -1,0 +1,72 @@
+/**************
+
+DOCUMENTATION OF CONSTRUCTORS 1.2
+***************/
+
+
+
+public class MyClass2 {
+
+	float length;
+	float width;
+	float height;
+
+	public float getCubeVolume() {
+
+		return (length * width * height);
+
+	}
+
+	MyClass2 () {
+
+		System.out.println("The Constructor Gets Executed First.");
+
+		length = 10.12f;
+		width = 20.43f;
+		height = 30.24f;
+
+
+	}
+
+	MyClass2 (float a, float b, float c) {
+
+		System.out.println("This is the Second Constructor.");
+		length = a;
+		width = b;
+		height = c;
+	}
+
+}
+
+
+
+
+
+import javax.swing.*;
+
+import java.util.Scanner;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+
+        // TODO Auto-generated method stub
+
+            MyClass2 cube1 = new MyClass2();
+
+            System.out.println(cube1.getCubeVolume());
+
+            MyClass2 cube2 = new MyClass2(21.29f, 43.45f, 12.28f);
+
+            System.out.println(cube2.getCubeVolume());
+
+
+
+        }
+
+    }
+
+    
+
+    
+	

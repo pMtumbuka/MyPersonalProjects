@@ -1,0 +1,105 @@
+/*************** 
+
+DOCUMANTATION OF CLASSES AND OBJECTS / INSTANCES 1.1 
+
+****************/
+
+
+public class MyClass2 {
+
+	int id;
+	String name;
+	int age;
+	String tertiary;
+
+	public void setId(int id) {
+
+		this.id = id;
+
+	}
+
+	public int getId() {
+
+		return id;
+
+	}
+
+	public void setName(String name) {
+
+		this.name = name;
+
+	}
+
+	public String getName() {
+
+		return name;
+
+	}
+
+	public void setAge(int age) {
+
+		this.age = age;
+
+	}
+
+	public int getAge() {
+
+		return age;
+
+	}
+
+	public void setTertiary(String tertiary) {
+
+		this.tertiary = tertiary;
+
+	}
+
+	public String getTertiary() {
+
+		return tertiary;
+
+	}
+
+}
+
+
+import javax.swing.*;
+import java.util.Scanner;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    MyClass2 patrick = new MyClass2(); 
+
+        patrick.setId(1);
+        patrick.setName("Mtumbuka");
+        patrick.setAge(20);
+        patrick.setTertiary("2nd Year");
+
+    MyClass2 victor = new MyClass2();
+
+        victor.setId(2);
+        victor.setName( "Magreta");
+        victor.setAge(22);
+        victor.setTertiary("2nd year");
+
+    System.out.println("-------------");
+
+    System.out.println(patrick.getName() + " is " + patrick.getAge() + " years old" + ". He is in " + patrick.getTertiary());
+
+    System.out.println("-------------");
+
+    System.out.println(victor.getName()+ " is " + victor.getAge() + " years old" + ". He is in " + victor.getTertiary());
+       
+    System.out.println("---------------");
+
+        }
+
+    }
+
+    
+
+    
+	

@@ -1,0 +1,49 @@
+p.para1 {
+    color: brown;
+    font-size: xx-large;
+    font-weight: 800;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p.para2 {
+    color: black;
+    font-size: xx-large;
+    font-style: oblique;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 800px;
+    border-radius: 400px;
+    float: center;
+    border-color: blue;
+    margin-right: 50px;
+    color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: lighter;
+    border-style: groove;
+    border: chocolate;
+    border-radius: inherit;
+}
+
+h1 {
+    border-bottom: 2px solid blanchedalmond;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+}
+
+
+/* Example CSS for styling div elements */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}

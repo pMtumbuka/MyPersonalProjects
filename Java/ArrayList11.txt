@@ -1,0 +1,75 @@
+
+
+/**************
+
+DOCUMENTATION OF THE ARRAY LISTS < > 1.11
+
+**************/
+
+
+import java.util.ArrayList;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        short simpleArray[] = new short[5]; // or {1, 2, 3, 4, 5};
+        
+        ArrayList<Integer> myList = new ArrayList<Integer>(5);
+
+        myList.add(0, 12);
+
+        myList.add(1, 30);
+
+        myList.add(2, 44);
+
+        myList.add(3, 57);
+
+        myList.add(4, 65);
+
+        for (Integer p : myList)
+            System.out.println(p);
+
+        System.out.println(myList);
+
+        System.out.println("The size of the array is " + myList.size());
+
+        myList.remove(3);
+
+        for (Integer p : myList)
+            System.out.println(p);
+
+        System.out.println(myList);
+
+        System.out.println("The size of the array is " + myList.size());  
+        
+         myList.clear();
+
+        for (Integer p : myList)
+            System.out.println(p);
+
+        System.out.println(myList);
+
+        System.out.println("The size of the array is " + myList.size()); 
+
+    }
+}
+
+
+
+12
+30
+44
+57
+65
+[12, 30, 44, 57, 65]
+The size of the array is 5
+12
+30
+44
+65
+[12, 30, 44, 65]
+The size of the array is 4
+[]
+The size of the array is 0

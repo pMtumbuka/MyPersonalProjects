@@ -1,0 +1,16 @@
+@echo off
+tilte Matrix
+color 0a
+mode 1000
+goto Greeting
+
+:Greeting
+cls
+echo Hello Neo.
+pause
+cls
+goto Matrix
+
+:Matrix
+echo %random%
+goto Matrix

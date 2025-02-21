@@ -1,0 +1,94 @@
+
+
+
+/***********************
+
+DOCUMENTATION ON THE RECOMMENDED EXTENSIONS FOR HTML, CSS & JAVASCRIPT
+
+***********************/
+
+
+
+
+
+For HTML, CSS, and JavaScript development, there are several extensions available across different code editors that can enhance your coding experience. Here are some recommended extensions for each:
+
+**HTML:**
+1. **HTML Snippets:** Provides HTML snippets in Visual Studio Code for quick and easy coding.
+2. **Auto Close Tag:** Automatically adds closing tags when you type in the opening tag.
+3. **HTML CSS Support:** Provides autocompletion for CSS classes and IDs in HTML files.
+4. **Live Server:** Launches a development local server with live reload feature for dynamic web development.
+5. **Prettier - Code formatter:** Formats your HTML code to maintain consistent styling.
+6. **Emmet:** Enables you to write HTML and CSS code faster with abbreviations.
+7. **Color Highlight:** Shows colors as actual colors in your CSS files for easier visualization.
+
+
+
+**CSS:**
+1. **CSS Peek:** Allows you to quickly peek into CSS definitions from HTML files.
+2. **CSScomb:** Formats your CSS code according to customizable coding style.
+3. **CSS Lint:** Provides CSS linting and fixes to maintain code quality.
+4. **Path Intellisense:** Autocompletes filenames in CSS `url()` function.
+5. **Bracket Pair Colorizer:** Colors matching brackets to make CSS code easier to read.
+
+
+
+**JavaScript:**
+1. **ESLint:** Integrates ESLint into VS Code for JavaScript linting and fixes.
+2. **Debugger for Chrome:** Enables debugging JavaScript code in VS Code with Google Chrome.
+3. **npm:** Provides support for npm scripts within VS Code.
+4. **Quokka.js:** Rapid prototyping playground for JavaScript and TypeScript.
+5. **JavaScript (ES6) code snippets:** Adds snippets for ES6 JavaScript syntax.
+
+Remember, the best extensions for you depend on your workflow and preferences. These recommendations can serve as a starting point for enhancing your HTML, CSS, and JavaScript development experience.
+
+
+
+
+/***********************
+
+DOCUMENTATION ON THE RECOMMENDED EXTENSIONS FOR HTML, CSS & JAVASCRIPT
+
+***********************/
+
+
+
+
+
+
+
+Sure, the `<style>` tags are used in HTML to define the style of the content within the document. You can use them to specify things like font styles, colors, layout, etc. Here's a basic example of how you might use `<style>` tags:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styling Example</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my website</h1>
+    <p>This is a paragraph of text. It will inherit the styles defined above.</p>
+</body>
+</html>
+```
+
+In this example:
+
+- We use `<style>` tags within the `<head>` section of the HTML document.
+- Inside the `<style>` tags, we define CSS rules to style various elements.
+- For example, we set the font family for the `body`, color for `h1` headings, font size and line height for `p` paragraphs, etc.
+- These styles will be applied to the corresponding HTML elements when the page is rendered in a web browser.

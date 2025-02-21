@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en-us">
+
+    <title> Our Web Page </title>
+
+    <!-- linking to an external css file called "Phade.css" -->
+
+    <link rel="stylesheet" type="text/css" href="Phade.css">
+
+    <script>
+
+        function hello() {
+
+            alert('Welcome All, Welcome Home');
+
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // change colour to color of choice
+                document.querySelectorAll('button').forEach (function(button) {
+
+                    button.onclick = () => {
+
+                        document.querySelector('#film').style.color = button.dataset.color;
+                    }
+              
+            })
+
+        });
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // change the color to the option choosen
+                document.querySelectorAll('select').forEach (function(select)
+                {
+                    select.onchange = () => {
+
+                        document.querySelector('#audio').style.color = select.value;
+                    }
+                })
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- anchor for the bottom link -->
+    <a id="top"></a>
+    <br>
+    <br>
+
+    <button onclick="hello()"> Welcome </button>
+    <br>
+
+    <!-- the h1 being changed by the color buttons -->
+    <h1 id="film"> videos </h1>
+
+    <!-- the color buttons changing h1's color -->
+    <button data-color="red">Red</button>
+
+    <button data-color="blue">Blue</button>
+
+    <button data-color="green">Green</button>
+    <br>
+
+    <!-- the audio header being changed by the drop down menu list -->
+    <h1 id="audio">audios</h1>
+    
+    <!-- a drop down menu list -->
+    <select>
+
+        <option value="black">Black</option>
+
+        <option value="darkblue">DarkBlue</option>
+
+        <option value="yellow">Yellow</option>
+
+        <option value="orange">Orange</option>
+
+    </select>
+    <br>
+    <br>
+
+    <!-- Link to jump to bottom -->
+    <a href="#bottom"> Jump To Bottom </a>
+
+    <p class="para1">
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your
+        document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you
+        want from the different galleries. Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your
+        headings change to match the new theme. Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table,
+        click where you want to add a row or a column, and then click the plus sign. Reading is easier, too, in the new Reading view. You can collapse parts of the document and focus on the text you want. If you need to stop reading before you reach the
+        end, Word remembers where you left off - even on another device.
+    </p>
+    <br>
+
+    <img src="C:\Users\Temporary\OneDrive\Documents\Web Dev\images/Document.jpg" title="A Coyote" alt="An image of a Coyote" />
+
+
+    <div class="container">
+        <h2>This is a heading</h2>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+    </div>
+
+
+    <p class="para2">
+
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your
+        document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you
+        want from the different galleries. Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your
+        headings change to match the new theme. Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table,
+        click where you want to add a row or a column, and then click the plus sign. Reading is easier, too, in the new Reading view. You can collapse parts of the document and focus on the text you want. If you need to stop reading before you reach the
+        end, Word remembers where you left off - even on another device.
+
+    </p>
+
+    <!-- Link to jump to top -->
+    <a href="#top"> Jump To Top </a>
+
+    <!-- anchor to jump to bottom -->
+    <a id="bottom"></a>
+
+</body>
+
+</html>

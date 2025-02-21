@@ -1,0 +1,33 @@
+
+
+/***********************
+
+DOCUMENTATION ON THE DATE AND NUMBER BOX IN HTML
+
+***********************/
+
+
+
+To create a date and number input box in HTML, you can use the `<input>` element with the `type` attribute set to "date" for the date input and "number" for the number input. Here's an example:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date and Number Input Boxes</title>
+</head>
+<body>
+
+<label for="dateInput">Select a Date:</label>
+<input type="date" id="dateInput" name="dateInput">
+
+<label for="numberInput">Enter a Number:</label>
+<input type="number" id="numberInput" name="numberInput">
+
+</body>
+</html>
+```
+
+This code will display two input boxes, one for selecting a date and another for entering a number. The browser will provide appropriate interfaces for each type of input, such as a date picker for the date input and a numeric keyboard for the number input on mobile devices.

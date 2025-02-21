@@ -1,0 +1,101 @@
+
+/**************
+
+DOCUMENTATION OF THE "PUBLIC, PROTECTED, NO MODIFIERS & PRIVATED" KEYWORDS 1.5.1
+
+**************/
+
+
+public class MyClass2 {
+
+	private char letter;
+	private byte age;
+
+	public char getLetter(char letter) {
+
+		return (char) (letter);
+
+	}
+
+	public void setLetter(char letter) {
+
+		this.letter = (char) (letter);
+
+	}
+
+	public byte getAge(byte age) {
+
+		return (byte) (age);
+
+	}
+
+	public void setAge(byte age) {
+
+		this.age = (byte) (age);
+
+	}
+	
+}
+
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        MyClass2 student = new MyClass2();
+
+        student.setLetter('P');
+
+        student.setAge((byte) 20);
+
+        System.out.println(student.getLetter('P'));
+
+        System.out.println(student.getAge((byte) 20));
+
+   }
+
+}
+
+    
+
+    
+/****************
+
+DOCUMENTATION OF THE "PROTECTED & FINAL" KEYWORDS 1.5.2
+
+***************/
+
+
+public class MyClass2 {
+
+	protected final char firstLetter;
+	protected final byte age;
+
+	MyClass2() {
+
+		firstLetter = 'M';
+		age = 20;
+
+	}
+}
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+       MyClass2 student = new MyClass2();
+
+       System.out.println("Patrick " + student.firstLetter + " Mtumbuka is " + student.age + " years old."); // Patrick M Mtumbuka is 20 years old.
+
+   }
+
+}
+
+    
+
+    
+	

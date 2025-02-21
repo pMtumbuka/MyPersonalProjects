@@ -1,0 +1,287 @@
+
+
+
+/***********************
+
+DOCUMENTATION ON QUERY SELECTROS IN JAVASCRIPT 
+
+***********************/
+
+
+
+<script>
+        function hello() {
+            alert('Welcome All, Welcome Home');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+
+	     // 1. INDIVIDUAL BUTTONS
+
+            // change colour to red
+            document.querySelector('#red').onclick = function() {
+                document.querySelector('#film').style.color = 'red';
+            }
+
+            // change colour to red
+            document.querySelector('#blue').onclick = function() {
+                document.querySelector('#film').style.color = 'blue';
+            }
+
+            // change colour to red
+            document.querySelector('#green').onclick = function() {
+                document.querySelector('#film').style.color = 'green';
+            }
+
+	    
+	     // 2. GROUPED BUTTONS
+
+	    // change colour to color of choice
+            document.querySelectorAll('button').forEach (function(button) {
+
+                button.onclick = () => {
+
+                    document.querySelector('#film').style.color = button.dataset.color;
+                }
+              
+            })
+
+        });
+
+	// 3. DROP DOWN BUTTONS
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // change the color to the option choosen
+            document.querySelector('select').onchange = function() {
+                document.querySelector('#film').style.color = this.value;
+            }
+        });
+</script>
+
+
+
+ <button onclick="hello()"> Welcome </button>
+    <br>
+
+    // 1. INDIVIDUAL BUTTONS
+
+    <h1 id="film"> videos </h1>
+
+    <button id="red">Red</button>
+
+    <button id="blue">Blue</button>
+
+    <button id="green">Green</button>
+    <br>
+    <br>
+
+
+    // 2. GROUPED BUTTONS
+
+    <h1 id="film"> videos </h1>
+
+    <button data-color="red">Red</button>
+
+    <button data-color="blue">Blue</button>
+
+    <button data-color="green">Green</button>
+    <br>
+
+     // 3. DROP DOWN BUTTONS
+
+    <select id="colors">
+
+        <option value="yellow">Yellow</option>
+
+        <option value="purple">Purple</option>
+
+        <option value="pink">Pink</option>
+
+        <option value="orange">Orange</option>
+
+    </select>
+    <br>
+    <br>
+
+
+
+
+/***********************
+
+DOCUMENTATION ON QUERY SELECTROS IN JAVASCRIPT 
+
+***********************/
+
+
+
+
+<button onclick="hello()"> Welcome </button>
+    <br>
+
+
+    <!-- the h1 being changed by the color buttons -->
+    <h1 id="film"> videos </h1>
+
+    <!-- the color buttons changing h1's color -->
+    <button data-color="red">Red</button>
+
+    <button data-color="blue">Blue</button>
+
+    <button data-color="green">Green</button>
+    <br>
+    <br>
+
+
+    <!-- the audio header being changed by the drop down menu list -->
+    <h1 id="audio">audios</h1>
+    <br>
+    <br>
+
+
+    <!-- a drop down menu list -->
+    <select>
+
+        <option value="black">Black</option>
+
+        <option value="red">Red</option>
+
+        <option value="blue">Blue</option>
+
+        <option value="green">Green</option>
+
+    </select>
+
+
+
+
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+
+            function hello() {
+
+                alert('Welcome All, Welcome Home');
+
+            }
+
+        });
+            
+            document.addEventListener('DOMContentLoaded', function() {
+
+            // change colour to color of choice
+                document.querySelectorAll('button').forEach (function(button) {
+
+                    button.onclick = () => {
+
+                        document.querySelector('#film').style.color = button.dataset.color;
+                    }
+              
+            })
+
+        });
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // change the color to the option choosen
+                document.querySelectorAll('select').forEach (function(select)
+                {
+                    select.onchange = () => {
+
+                        document.querySelector('#audio').style.color = this.value;
+                    }
+                })
+
+        });
+
+    </script>
+
+
+
+
+/***********************
+
+DOCUMENTATION ON QUERY SELECTROS IN JAVASCRIPT 
+
+***********************/
+
+
+
+
+The code you provided seems to have a few issues:
+
+1. The `hello()` function is defined but not being called anywhere. If you intend for it to execute when the button is clicked, you need to add an event listener to the button to trigger the function.
+
+2. In the second event listener, when setting the color of the `<h1>` element based on the button clicked, you are using `button.dataset.color`, which is correct. However, in the third event listener, when setting the color based on the option chosen in the dropdown menu, you're trying to access `this.value`, but `this` here refers to the `select` element, not the selected option. You should use `select.value` instead.
+
+Here's the corrected code:
+
+```html
+<button onclick="hello()"> Welcome </button>
+<br>
+
+<!-- the h1 being changed by the color buttons -->
+<h1 id="film"> videos </h1>
+
+<!-- the color buttons changing h1's color -->
+<button data-color="red">Red</button>
+<button data-color="blue">Blue</button>
+<button data-color="green">Green</button>
+<br><br>
+
+<!-- the audio header being changed by the drop down menu list -->
+<h1 id="audio">audios</h1>
+<br><br>
+<!-- a drop down menu list -->
+<select id="colorSelect">
+    <option value="black">Black</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+</select>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        function hello() {
+            alert('Welcome All, Welcome Home');
+        }
+
+        // change colour to color of choice
+        document.querySelectorAll('button').forEach(function(button) {
+            button.onclick = () => {
+                document.querySelector('#film').style.color = button.dataset.color;
+            }
+        });
+
+        // change the color to the option chosen
+        document.querySelector('#colorSelect').onchange = function() {
+            document.querySelector('#audio').style.color = this.value;
+        };
+
+    });
+</script>
+```
+
+These corrections should make your code work as intended.
+
+
+
+I see, let's diagnose the issue further. Here are a few steps to troubleshoot:
+
+1. **Check for Errors**: Open your browser's developer tools (usually by pressing F12 or right-clicking on the page and selecting "Inspect"), and navigate to the "Console" tab. Look for any error messages that might give clues about what's going wrong.
+
+2. **Ensure Correct HTML Structure**: Make sure that your HTML structure is correct. All elements should be properly nested and closed. Sometimes, a missing or misplaced tag can cause unexpected behavior.
+
+3. **Verify Event Listeners**: Ensure that event listeners are being attached properly to the elements you intend. For example, the `hello()` function should be triggered when the button is clicked.
+
+4. **Test in Isolation**: Try simplifying your code to isolate the issue. For example, create a minimal HTML file with just the button and the `hello()` function to see if it works as expected. Then gradually add more elements and functionality to identify where the problem arises.
+
+5. **Check for Conflicts**: Make sure there are no conflicting scripts or styles that might interfere with the functionality you're trying to implement.
+
+6. **Verify Browser Compatibility**: Ensure that the features you're using are supported by the browsers you're testing in. Sometimes, certain features might not work as expected in certain browsers.
+
+By following these steps and providing any error messages or specific details about how the code is not working, we can further diagnose and resolve the issue. If you'd like, you can share any error messages or describe the specific behavior you're observing, and I can assist you further.
+
+
+

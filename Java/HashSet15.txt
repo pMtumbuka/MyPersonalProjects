@@ -1,0 +1,69 @@
+
+
+/**************
+
+DOCUMENTATION OF THE HASHSET LIST < > 1.15
+
+**************/
+
+
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        HashSet < String > name = new HashSet< String >();
+
+        name.add("Patrick");
+
+        name.add("Hopeson");
+
+        name.add("Mayamiko");
+
+        name.add("Victor");
+
+        name.add("Moses");
+
+        name.add("Dalitso");
+
+	
+	// Using the Enhanced For... Loop 
+
+        for (String namesOfStudents : name)
+            System.out.println(namesOfStudents);
+
+        System.out.println("----------------");
+
+	
+	// Using the Iterator Class
+
+        Iterator < String >  iterate = name.iterator();
+
+        while (iterate.hasNext())
+            System.out.println(iterate.next());
+
+       
+    }
+
+}
+
+
+
+
+Victor
+Patrick
+Hopeson
+Mayamiko
+Dalitso
+Moses
+----------------
+Victor
+Patrick
+Hopeson
+Mayamiko
+Dalitso
+Moses

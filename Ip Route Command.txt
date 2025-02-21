@@ -1,0 +1,91 @@
+
+Home
+CCNA Study Guide
+Linux Tutorials
+Networking Tutorials
+Career Resources
+IP Route command Explained with Examples
+This tutorial explains how to use the 'ip route' command to create a static route on the router. Learn the parameters, arguments, and options of the 'ip route' command.
+
+The 'ip route' command is a global configuration command. This command defines a static route for a specific destination network. To define a static route, this command needs the following information.
+
+The destination network address
+Either the name of the local interface connected to the destination network or the IP address of the next-hop router.
+Additional control options
+We have already discussed the above information in the previous part of this tutorial. In this part, we will learn how to specify the above information to the 'ip route' command to create and add a static route to the routing table.
+
+This tutorial is the third part of the tutorial "Static Routing Configuration, Commands, and Concepts Explained". The other parts of this tutorial are the following.
+
+Static Routes and Static Routing Explained
+Types of Static Routes Explained
+Static Routing Configuration Guide with Examples
+
+The 'ip route' command syntax
+The 'ip route' command uses two syntaxes. It uses the first syntax to specify the local interface to forward data packets to the destination network and the second syntax to specify the IP address of the next-hop router that can send data packets to the destination network.
+
+If you specify the local interface, the router assumes the destination network is directly connected to the local interface and forwards the destination network's data packets to the destination network. If you specify the IP address of the next-hop router, the router assumes the destination network is available on another router. In this case, the router sends the destination network's data packets to the next-hop router. A next-hop router is a router that knows how to reach the destination network.
+
+To specify the name of the local interface, uses the following syntax.
+
+Router(config)# ip route destination_network_# [subnet_mask]
+interface_to_exit
+[administrative_distance] [permanent]
+To specify the IP address of the next-hop router, uses the following syntax.
+
+Router(config)# ip route destination_network_# [subnet_mask]
+ip_address_of_next_hop_neighbor
+[administrative_distance] [permanent]
+Let's understand both syntaxes.
+
+ip route
+This is the main command. This command defines a static route. To define a static route, it needs the following parameters.
+
+destination_network_#
+This is the destination network address for which you are creating a static route.
+
+subnet_mask
+This is the subnet mask of the destination network. This is an optional parameter. If you skip this parameter, the command uses the default subnet mask for the destination network. The default subnet masks for class A, B, and C are 255.0.0.0, 255.255.0.0, and 255.255.255, respectively. For example, if the destination network belongs to class B, the command will use the subnet mask 255.255.0.0.
+
+interface_to_exit or ip_address_of_next_hop_neighbor
+You have two options for specifying how to reach the destination network. You can specify the name of the local interface or the IP address of the next-hop router. If you specify the name of a local interface, the router uses the local interface to forward the destination network's data packets. You should use this option when the destination network is directly connected to the interface.
+
+If you specify the IP address of the next-hop router, the router sends the destination network's data packets to the next-hop router. You should use this option when the destination network is connected via the next-hop router.
+
+Let's understand the difference between both options.
+
+You can connect multiple networks to the same interface of the router. If you connect more than one networks to the same interface, the interface works as a multi-access link. If the interface is connected to only one network, the interface works as a point-to-point link.
+
+On a multi-access link, you should always use the IP address of the next-hop. On a point-to-point link, you can use any one option from both options.
+
+point to point and multi point link
+
+If you use the name of a local interface, the router shows the same recommendation on the console prompt and inserts the route as the connected route in the routing table.
+
+ip route command console message
+
+administrative_distance
+Administrative distance is the trustworthiness of the route. If multiple routes for the same destination are available, the router always choose the route with the lowest administrative distance value.
+
+You can use this option to create multiple static routes to the same destination network. For example, if you have two routes for a destination network, and want to use the first route as the primary route and the second route as the backup route, you can set the administrative distance value of the second route to higher than the first route. If you configure two static routes in this way, the router always selects the first route to forward data packets to the destination network. If the first route fails, the router automatically switches to the second route.
+
+administrative distance
+
+This option is optional. If you skip this option, the router automatically sets the administrative distance value depending on the value of the previous parameter. If you specified the name of a local interface in the previous parameter, the router sets the administrative distance value to 0. And if you specified the IP address of the next-hop router, the router sets the administrative distance value to 1.
+
+Permanent
+This is also an optional option. If you specify this parameter, the router keeps the route in the routing table even when the route fails. If you don't use this option, the router automatically removes the route when the route fails.
+
+That's all for the third part of the tutorial. In this part, we discussed the parameters, options, and arguments of the 'ip route' command. In the next part of this tutorial, we will learn how to use the 'ip route' command to create and add static routes to the routing table.
+
+ By ComputerNetworkingNotes  Updated on 2023-09-24 05:30:02 IST
+
+ ComputerNetworkingNotes  CCNA Study Guide  IP Route command Explained with Examples 
+
+ Basic Routing Concepts and Protocols ExplainedStatic Routing Configuration Guide with Examples 
+We do not accept any kind of Guest Post. Except Guest post submission, for any other query (such as adverting opportunity, product advertisement, feedback, suggestion, error reporting and technical issue) or simply just say to hello mail us  ComputerNetworkingNotes@gmail.com
+
+Computer Networking Notes and Study Guides © 2023. All Rights Reserved.
+
+About
+Privacy Policy
+Terms and Conditions

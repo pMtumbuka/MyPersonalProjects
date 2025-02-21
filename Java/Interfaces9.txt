@@ -1,0 +1,50 @@
+
+
+/*************
+
+DOCUMENTATION ON INTERFACES 1.9
+
+************/
+
+
+public interface MyClass2 {
+
+	/* National Bank */
+
+	float getInterestRate();
+
+}
+
+
+
+public class MyClass3 implements MyClass2{
+
+    /* NBS Bank */
+
+   public float getInterestRate() {
+
+		return (float) (5.0);
+
+	} 
+
+} 
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+
+        // TODO Auto-generated method stub
+
+        MyClass2 NBS_Bank = new MyClass3();
+
+        System.out.println(NBS_Bank.getInterestRate() + "%");
+
+   }
+
+}
+
+    
+
+    
+	

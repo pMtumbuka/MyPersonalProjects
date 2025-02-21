@@ -1,0 +1,114 @@
+
+
+/**************
+
+DOCUMENTATION OF THE LIST ITERATORS FOR BOTH THE ARRAY LISTS < > & LINKED LISTS < > 1.14
+
+**************/
+
+
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        ArrayList < Character > myName = new ArrayList < Character >();
+        
+        myName.add(0, 'P');
+
+        myName.add(1, 'A');
+
+        myName.add(2, 'T');
+
+        myName.add(3, 'R');
+
+        myName.add(4, 'I');
+
+        myName.add(5, 'C');
+
+        myName.add(6, 'K');
+
+        ListIterator < Character > iterate = myName.listIterator();
+        while (iterate.hasNext())
+            System.out.println(iterate.next());
+
+        System.out.println("----------------");
+
+        while (iterate.hasPrevious())
+            System.out.println(iterate.previous());
+
+        System.out.println("------------------");
+
+
+        LinkedList < Character > mySurname = new LinkedList < Character >();
+        
+        mySurname.add(0, 'M');
+    
+        mySurname.add(1, 'T');
+    
+        mySurname.add(2, 'U');
+    
+        mySurname.add(3, 'M');
+    
+        mySurname.add(4, 'B');
+    
+        mySurname.add(5, 'U');
+    
+        mySurname.add(6, 'K');
+
+        mySurname.add(7, 'A');
+    
+        ListIterator < Character > iterateThis = mySurname.listIterator();
+        while (iterateThis.hasNext())
+            System.out.println(iterateThis.next());
+    
+        System.out.println("----------------");
+    
+        while (iterateThis.hasPrevious())
+            System.out.println(iterateThis.previous());
+
+    }
+
+}
+
+
+
+P
+A
+T
+R
+I
+C
+K
+----------------
+K
+C
+I
+R
+T
+A
+P
+------------------
+M
+T
+U
+M
+B
+U
+K
+A
+----------------
+A
+K
+U
+B
+M
+U
+T
+M

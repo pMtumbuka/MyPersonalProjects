@@ -1,0 +1,179 @@
+
+
+/****************
+
+DOCUMENTATION THE "STATIC" KEY WORD 1.4.1
+
+****************/
+
+
+public class MyClass2 {
+
+
+
+	public static char DoSomething(char bob){
+
+		return (char) (bob);
+
+	}
+
+	public char DoSomethingElse(char bob){
+
+		return (char) (bob);
+
+	}
+
+}
+
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        MyClass2.DoSomething('P');
+
+        MyClass2 Character2 = new MyClass2();
+
+        Character2.DoSomethingElse('M');
+
+        System.out.println(MyClass2.DoSomething('P'));
+
+        System.out.println(Character2.DoSomethingElse('M'));
+
+ 
+   }
+
+}
+
+
+
+
+
+/**************
+
+DOCUMENTATION THE "STATIC" KEY WORD (GETTERS & SETTERS) 1.4.2
+
+**************/
+
+
+
+
+public class MyClass2 {
+
+	String name;
+	byte age;
+	static short NumberOfStudents = 0;
+
+	MyClass2(){
+
+		NumberOfStudents++;
+
+	}
+
+	public static short getNumberOfStudents() {
+
+		return (NumberOfStudents);
+
+	}
+
+	public String getName() {
+
+		return (name);
+
+	}
+
+	public void setName (String name) {
+
+		this.name = name;
+
+	}
+
+	public byte getAge() {
+
+		return (age);
+
+	}
+
+	public void setAge(byte age) {
+
+		this.age = age;
+
+	}
+	
+}
+
+
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        MyClass2 patrick = new MyClass2();
+
+        MyClass2 victor = new MyClass2();
+
+        MyClass2 mayamiko = new MyClass2();
+
+        MyClass2 moses = new MyClass2();
+
+        MyClass2 ulunji = new MyClass2();
+
+        MyClass2 precious = new MyClass2();
+
+        System.out.println(MyClass2.getNumberOfStudents()); // 6 students in totall
+
+   }
+
+}
+
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        MyClass2 patrick = new MyClass2();
+
+        System.out.println(patrick.getNumberOfStudents()); // 1 student in total
+
+        MyClass2 victor = new MyClass2();
+
+        System.out.println(victor.getNumberOfStudents()); // 1 + 1 = 2 students in total
+
+        MyClass2 mayamiko = new MyClass2();
+
+        System.out.println(mayamiko.getNumberOfStudents()); // 2 + 1 = 3 students in total
+
+        MyClass2 moses = new MyClass2();
+
+        System.out.println(moses.getNumberOfStudents()); // 3 + 1 = 4 students in total
+
+        MyClass2 ulunji = new MyClass2();
+
+        System.out.println(MyClass2.getNumberOfStudents()); // 4 + 1 = 5 students in total
+
+        MyClass2 precious = new MyClass2();
+
+        System.out.println(precious.getNumberOfStudents()); // 5 + 1 = 6 students in total
+
+   }
+
+}
+
+    
+
+    
+	
+    
+
+    
+	
+
+    
+
+    

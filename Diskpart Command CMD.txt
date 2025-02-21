@@ -1,0 +1,54 @@
+Microsoft Windows [Version 10.0.26100.2894]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\System32>diskpart
+
+Microsoft DiskPart version 10.0.26100.1150
+
+Copyright (C) Microsoft Corporation.
+On computer: PMTUMBUKA
+
+DISKPART> list disk
+
+  Disk ###  Status         Size     Free     Dyn  Gpt
+  --------  -------------  -------  -------  ---  ---
+  Disk 0    Online          238 GB  1024 KB
+  Disk 1    Online           29 GB      0 B
+
+DISKPART> select disk 0
+
+Disk 0 is now the selected disk.
+
+DISKPART> list partition
+
+  Partition ###  Type              Size     Offset
+  -------------  ----------------  -------  -------
+  Partition 1    Primary            100 MB  1024 KB
+  Partition 2    Primary            237 GB   101 MB
+  Partition 3    Recovery           642 MB   237 GB
+
+DISKPART> select partition 2
+
+Partition 2 is now the selected partition.
+
+DISKPART> list partition
+
+  Partition ###  Type              Size     Offset
+  -------------  ----------------  -------  -------
+  Partition 1    Primary            100 MB  1024 KB
+* Partition 2    Primary            237 GB   101 MB
+  Partition 3    Recovery           642 MB   237 GB
+
+DISKPART> select partition 2
+
+Partition 2 is now the selected partition.
+
+DISKPART> shrink desired=100000
+
+DiskPart successfully shrunk the volume by:   97 GB
+
+DISKPART> exit
+
+Leaving DiskPart...
+
+C:\Windows\System32>

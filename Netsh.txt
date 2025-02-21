@@ -1,0 +1,36 @@
+C:\Windows\system32>cd \
+
+C:\>netsh
+
+netsh>wlan show profile
+
+netsh>wlan show profile "Mrs malonje"
+
+netsh>wlan show profile "Mrs malonje" key=clear
+
+Key Content            : Malonjejr2000
+
+C:\Windows\system32>netsh wlan show wlanreport
+Generating report ... C:\ProgramData\Microsoft\Windows\WlanReport\wlan-report-latest.html
+done
+
+C:\Windows\system32>netsh wlan show all
+
+netsh>exit
+
+C:\Windows\system32>netsh interface show interface
+
+Admin State    State          Type             Interface Name
+-------------------------------------------------------------------------
+Enabled        Disconnected   Dedicated        Wi-Fi
+
+C:\Windows\system32>nslookup [resolving NDS into IP]
+
+C:\Windows\system32>ipconfig /all [know your pc ip adress and all net details]
+
+C:\Windows\system32>ping [know the ip adress of any website]
+
+C:\Windows\system32>netstat -an [show all connections]
+
+C:\Windows\system32>tracert [show route path bwtween your pc to website]
+

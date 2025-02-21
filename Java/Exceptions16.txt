@@ -1,0 +1,126 @@
+
+
+
+/**************
+
+DOCUMENTATION ON THE HANDLING OF EXCEPTIONS ( USING THE TRY... & CATCH FUNCTION ) 1.16.1
+
+**************/
+
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        byte num2[] = new byte[2]; 
+
+        try {
+
+            short num = (short) (100 / 0); 
+
+            System.out.println("The value of num2 = " + num2[3]);
+
+        } catch (ArithmeticException byZero) {
+
+            System.out.println(byZero);
+
+        } catch (ArrayIndexOutOfBoundsException outOfBounds) {
+
+            System.out.println(outOfBounds);
+
+        } catch (Exception anyError) {
+
+            System.out.println(anyError);
+
+        }
+
+        System.out.println("---------------------------------");     
+       
+    }
+
+}
+
+
+
+java.lang.ArithmeticException: / by zero
+---------------------------------
+
+java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 2
+---------------------------------
+
+
+
+
+/**************
+
+DOCUMENTATION ON THE HANDLING OF EXCEPTIONS ( USING FINALLY WITH TRY... & CATCH FUNCTION ) 1.16.2
+
+**************/
+
+
+
+
+public class MyClass {
+
+    @SuppressWarnings("finally")
+    
+    public static byte returnByte() {
+
+        byte num2[] = new byte[2]; 
+
+        num2[0] = 32;
+
+        try {
+
+	    @SuppressWarnings("unused")
+
+            short num = (short) (100 / 0); 
+
+            System.out.println("The value of num2 = " + num2[3]);
+
+        } catch (Exception anyError) {
+
+            System.out.println("Catch is Called Here.");
+
+            System.out.println(anyError);
+
+            System.out.println("----------------------");
+
+        } finally {
+
+            num2[0] = 23;
+
+            System.out.println("Finally is Called Here.");
+        
+            return num2[0];
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        System.out.println("---------------------------------");   
+        
+        System.out.println(returnByte());
+
+        System.console();
+
+        System.exit(0);
+       
+    }
+
+}
+
+      
+
+---------------------------------
+Catch is Called Here.
+java.lang.ArithmeticException: / by zero
+----------------------
+Finally is Called Here.
+23
+      

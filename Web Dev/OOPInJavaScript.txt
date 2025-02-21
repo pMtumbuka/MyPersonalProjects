@@ -1,0 +1,106 @@
+
+
+/**************
+
+DOCUMENTATION ON OBJECT ORIENTED PROGRAMMING IN JAVASCRIPT
+
+**************/
+
+
+
+// Objects in JavaScript
+
+
+const circle = {
+
+  radius: 2,
+
+  location: {
+    x: 2,
+    y: 2
+  },
+
+  draw: function() {
+
+    console.log('A Drawing of the circle');
+
+  }
+
+};
+
+circle.draw();
+
+
+// The FOR...IN Loop in JavaScript
+
+for (var key in circle) {
+
+  console.log(key); 
+  
+  // to show what is inside the circle object
+
+  console.log(key, circle[key]); 
+  
+  // to show the exact value of the variables in the cicle object
+
+  if (typeof circle[key] !== 'function')
+      console.log(key, circle[key]);
+
+}
+
+const keys = Object.keys(circle);
+
+console.log(keys);
+
+if ('radius' in circle)
+    console.log('The circle has a radius.');
+
+
+
+// Factory Functions in JavaScript
+
+function createCircle(radius) {
+
+  return {
+
+      radius,
+
+      draw: function() {
+
+        console.log('A Drawing of the Second circle');
+    
+      }    
+
+  }
+
+}
+
+const circle2 = createCircle(4.5);
+
+circle.draw();
+
+
+
+// Constructor Functions in JavaScript
+
+function Circle(radius) {
+
+  this.radius = radius;
+
+  this.draw = function() {
+
+    console.log('A Drawing of the third circle');
+
+  }
+}
+
+const another = new Circle(6.8);
+
+// Reference Variables in JavaScript
+
+let x = { value: 10 };
+let y = x;
+
+x.value = 20; // y = x = 20 
+
+// var & let are the same only that var is old.
