@@ -1,0 +1,85 @@
+
+
+/*************
+
+DOCUMENTATION ON POLYMORPHISM 1.7
+
+************/
+
+
+public class MyClass2 {
+
+	/* National Bank */
+
+	float getInterestRate() {
+
+		return (float) (0.0);
+
+	}
+
+}
+
+
+public class MyClass3 extends MyClass2{
+
+    /* NBS Bank */
+
+   float getInterestRate() {
+
+		return (float) (5.0);
+
+	} 
+
+}
+
+
+public class MyClass4 extends MyClass2 {
+
+    /* FDH Bank */
+
+    float getInterestRate() {
+
+		return (float) (6.0);
+
+	}
+
+}
+
+public class MyClass5 extends MyClass2{
+
+    /* FMB Bank */
+
+    float getInterestRate() {
+
+		return (float) (10.0);
+
+	}
+
+}
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        MyClass2 NBS_Bank = new MyClass3();
+
+        MyClass2 FDH_Bank = new MyClass4();
+
+        MyClass2 FMB_Bank = new MyClass5();
+
+        System.out.println(NBS_Bank.getInterestRate() + "%"); // 5.0%
+
+        System.out.println(FDH_Bank.getInterestRate() + "%"); // 6.0%
+
+        System.out.println(FMB_Bank.getInterestRate() + "%"); // 10.0%
+
+   }
+
+}
+
+    
+
+    
+	

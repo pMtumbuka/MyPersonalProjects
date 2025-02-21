@@ -1,0 +1,115 @@
+
+
+/**************
+
+DOCUMENTATION ON THE CREATION OF TEXT FILES ( USING THE FILE CLASS & PRINT WRITER CLASS ) 1.17.1
+
+**************/
+
+
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        try {
+
+            File myFirstFile = new File("FileCreation17.txt");
+
+            if (myFirstFile.exists()) {
+
+                myFirstFile.createNewFile();
+
+            }
+
+            PrintWriter contentsOfTheFile = new PrintWriter(myFirstFile);
+
+            contentsOfTheFile.println("This prints the contents of the file that I have just created now.");
+
+            contentsOfTheFile.println(2902918);
+
+            contentsOfTheFile.close();
+
+            System.out.println("The text file has successfully been created.");
+
+        } catch (IOException ioError) {
+
+            ioError.printStackTrace();
+
+        }
+       
+    }
+
+}
+
+
+
+The text file has successfully been created.
+
+
+
+/**************
+
+DOCUMENTATION ON HOW TO READ FROM ANY FILE ( USING THE BUFFERED READER CLASS & FILE READER CLASS ) 1.17.2
+
+**************/
+
+
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        BufferedReader reader = null;
+
+        try {
+            
+            reader = new BufferedReader(new FileReader("C:\\Users\\Temporary\\OneDrive\\Desktop\\pmm.html"));
+
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+
+                System.out.println(line);
+
+            }
+
+        } catch (Exception ioError) {
+
+            // TODO: handle exception
+
+            ioError.printStackTrace();
+
+        } finally {
+
+            try {
+
+                reader.close();
+
+            } catch (IOException error) {
+
+                // TODO Auto-generated catch block
+
+                error.printStackTrace();
+            }
+
+        }
+       
+    }
+
+}
+
+      
+
+      

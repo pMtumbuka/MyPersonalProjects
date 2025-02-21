@@ -1,0 +1,145 @@
+
+
+/***************
+
+DOCUMENTATION OF HTML BOILERPLATE AND SOME ENTITIES 
+
+**************/
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="html, css">
+
+    <meta name="description" content="Hello Google! I'm learning HTML and CSS!">
+    
+    <title>Document</title>
+
+     <style>
+
+        em {
+
+            color: darkblue;
+
+            font-size: larger;
+
+            font-weight: bolder;
+
+            font-style: normal;
+
+        }
+
+	strong {
+
+            color: black;
+
+            font-size: large;
+
+            font-style: oblique;
+
+            font-weight: lighter;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p> <em>Nxaba</em> <strong>For Life!</strong> </p>
+
+    <h1> Heading 1 </h1>
+
+    <h2> Heading 2 </h2>
+
+    <h3> Heading 3 </h3>
+
+    <h4> Heading 4 </h4>
+
+    <h5> Heading 5 </h5>
+
+    <h6> Heading 6 </h6>
+
+    <p> <em>Nxaba</em> <strong>For Life!</strong> </p>     
+
+    <h1> HTML </h1>
+
+    <h2> HTML Tutorial </h2>
+
+    <h1> CSS </h1>
+
+    <h2> CSS Tutorial </h2>
+
+    <h1> CODE </h1>
+
+    <h2> Code Exercise </h2>
+
+    <p> I Am Patrick Munthali &lt;Mtumbuka&gt; ! &copy; &nbsp; "Lorem + Tab" </p>
+
+    
+</body>
+
+</html>
+
+
+
+
+/***************
+
+DOCUMENTATION OF HTML <META> TAGS
+
+**************/
+
+
+
+
+
+In HTML, `<meta>` tags are used to provide metadata about the HTML document. Metadata is information about the HTML document that isn't displayed on the web page itself but is instead used by browsers, search engines, and other web services.
+
+Here are some common uses of `<meta>` tags in HTML:
+
+1. **Character Encoding:** Specifies the character encoding used in the document. This is essential for ensuring that the browser displays text correctly. Example:
+   ```html
+   <meta charset="UTF-8">
+   ```
+
+2. **Viewport Settings:** Defines the viewport properties, such as width and scale, for responsive web design. Example:
+   ```html
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   ```
+
+3. **Description:** Provides a brief description of the content of the page. This description may be used by search engines to display information about the page in search results. Example:
+   ```html
+   <meta name="description" content="This is a brief description of the page content.">
+   ```
+
+4. **Keywords:** Specifies keywords relevant to the content of the page. While not as widely used as in the past, some search engines may still consider these keywords when indexing the page. Example:
+   ```html
+   <meta name="keywords" content="HTML, CSS, JavaScript, web development">
+   ```
+
+5. **Author:** Indicates the author of the document. Example:
+   ```html
+   <meta name="author" content="John Doe">
+   ```
+
+6. **Viewport Refresh:** Automatically refreshes or redirects the page after a specified time interval. Example:
+   ```html
+   <meta http-equiv="refresh" content="30">
+   ```
+
+These are just a few examples of how `<meta>` tags can be used in HTML to provide metadata about the document. There are other attributes and values that can be used with `<meta>` tags depending on the specific requirements of your web page or application.

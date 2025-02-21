@@ -1,0 +1,82 @@
+
+/*************
+
+DOCUMENTATION ON INHERITANCE 1.6
+
+************/
+
+
+public class MyClass2 {
+
+	/* Polygon Class */
+
+	protected int height;
+	protected int width;
+
+	public void setValues(short a, short b) {
+
+		height = a;
+		width = b;
+
+	}
+}
+
+
+
+public class MyClass3 extends MyClass2{
+
+    /* Rectangle Class */
+
+    protected float area () {
+
+        return (float) (height * width);
+
+    }
+
+}
+
+
+
+public class MyClass4 extends MyClass2 {
+
+    /* Triangle Class */
+
+    protected float area () {
+
+        return (float) ((height * width) / 2);
+
+    }
+
+}
+
+
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+       MyClass2 student = new MyClass2();
+
+       MyClass3 rectangle = new MyClass3();
+
+       rectangle.setValues((short) 10, (short)10);
+
+       MyClass4 triangle = new MyClass4();
+
+       triangle.setValues((short) 10, (short) 10);
+
+       System.out.println("Area of Rectangle = " + rectangle.area()); // Area of Rectangle = 100.0
+
+       System.out.println("Area of Triangle = " + triangle.area()); // Area of Triangle = 50.0
+
+   }
+
+}
+
+    
+
+    
+	
+
+

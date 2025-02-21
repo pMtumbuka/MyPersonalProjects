@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords" content="html, css, javaScript, web development" />
+
+    <meta name="description" content="Hello Google! I'm learning HTML and CSS!" />
+
+    <meta http-equiv="author" content="Patrick Mtumbuka" />
+
+    <meta http-equiv="content-language" content="en-us" />
+
+    <title> My Webpage </title>
+
+    <!-- CSS code for styling the "em", "strong" & "img" tags in the paragraph tag -->
+
+    <style>
+        em {
+            color: darkblue;
+            font-size: larger;
+            font-weight: bolder;
+            font-style: normal;
+        }
+        
+        strong {
+            color: black;
+            font-size: large;
+            font-style: oblique;
+            font-weight: lighter;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        img {
+            width: 600px;
+            border-radius: 50px;
+            float: left;
+            border-color: blue;
+            margin-inline: 80px;
+            object-fit: cover;
+        }
+    </style>
+
+    <script>
+        let counter = 0;
+
+        function count() {
+            counter++;
+            alert(counter);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <button onclick="count()"> Count </button>
+    <br>
+    <br>
+
+    <!-- Link at the top of the page to jump to the HTML section of the document -->
+    <a href="#html"> HTML </a>
+
+    <!-- Link at the top of the page to jump to the CSS section of the document -->
+    <a href="#css"> CSS </a>
+
+    <!-- Link at the top of the page to jump to the bottom -->
+    <a href="#bottom"> Jump to Bottom </a>
+
+    <!-- Anchor at the top of the page -->
+    <a id="top"> </a>
+
+
+    <!-- An Example of an option box (dropdown menu || select box) -->
+    <h4> Select a Colour </h4>
+
+    <select id="fruit">
+    
+        <option value = "apple"> Apple </option>
+        <option value = "banana"> Banana </option>
+        <option value = "Orange"> Orange </option>
+        <option value = "grape"> Grape </option>
+    
+    </select>
+
+
+    <!-- An Example of a check box -->
+    <h4> Select Your Preferred Type Of Vehicle </h4>
+
+    <form>
+        <input type="checkbox" id="trucks" name="vehicle" value="Trucks">
+        <label for="trucks"> Trucks </label>
+        <br>
+
+        <input type="checkbox" id="pickups" name="vehicle" value="Pickups">
+        <label for="pickups"> Pickups </label>
+        <br>
+
+        <input type="checkbox" id="sports cars" name="vehicle" value="Sports Cars">
+        <label for="sports cars"> Sports Cars </label>
+        <br>
+
+        <input type="checkbox" id="trains" name="vehicle" value="Trains">
+        <label for="trains"> Trains </label>
+        <br>
+    </form>
+
+    <!-- An example of an "Ordered List" -->
+
+    <h4> Ordered List </h4>
+    <ol>
+        <li> Mangoes </li>
+        <li> Lemons </li>
+        <li> Oranges </li>
+        <li> Bananas </li>
+        <li> Pawpaws </li>
+    </ol>
+
+    <!-- An example of an "Unordered List" -->
+
+    <h4> Unordered List </h4>
+    <ul>
+        <li> Mangoes </li>
+        <li> Lemons </li>
+        <li> Oranges </li>
+        <li> Bananas </li>
+        <li> Pawpaws </li>
+    </ul>
+
+    <!-- An example of a table containing 3 rows & 4 columns -->
+
+    <!-- The "<td>" tags are for the columns -->
+
+    <!-- The "<tr>" tags are for the rows -->
+
+    <h4> Table Example </h4>
+
+    <table border="1">
+
+        <!-- The first row -->
+        <tr>
+            <td> Orange </td>
+            <td> Red </td>
+            <td> Blue </td>
+            <td> Black </td>
+        </tr>
+        <!-- The second row -->
+        <tr>
+            <td> Coyote </td>
+            <td> Wolf </td>
+            <td> Fox </td>
+            <td> Wild Dog </td>
+        </tr>
+        <!-- The Third row -->
+        <tr>
+            <td> Earth </td>
+            <td> Mars </td>
+            <td> Venus </td>
+            <td> Jupiter </td>
+        </tr>
+
+    </table>
+
+    <h4> Choose a Colour </h4>
+
+    <!-- Code for the "Radio Buttons" on the webpage -->
+
+    <input type="radio" id="red" name="colour" value="red">
+    <label for="red"> Red </label>
+    <br>
+
+    <input type="radio" id="blue" name="colour" value="blue">
+    <label for="blue"> Blue </label>
+    <br>
+
+    <input type="radio" id="green" name="colour" value="green">
+    <label for="green"> Green </label>
+    <br>
+
+    <!-- The paragraph that is being styled by the CSS code above -->
+
+    <p> <em>Nxaba</em> <strong>For Life!</strong> </p>
+
+    <h3> HTML </h3>
+
+    <!-- Anchor at the HTML section of the page -->
+    <a id="html"> </a>
+
+    <h4> HTML Tutorial </h4>
+
+    <p> HTML is a markup language and <b>not</b> excactly a programming language. </p>
+
+    <h3> CSS </h3>
+
+    <!-- Anchor at the CSS section of the page -->
+    <a id="css"> </a>
+
+    <h4> CSS Tutorial </h4>
+
+    <p> CSS is a styling language and <b>not</b> excactly a programming language. </p>
+    <br>
+
+
+    <!-- An Example of the "Date" and "Number Box" on The Web Page -->
+
+    <form>
+
+        <fieldset>
+
+            <legend> Enter the day on which you would like to travel to Zomba Plateau: </legend>
+            <br> Day: <input type="date" name="day">
+            <br>
+            <br> Number of Days: <input type="number" name="mumberOfDays" min="1" max="31">
+            <br>
+            <br> Name: <input type="text">
+
+        </fieldset>
+
+    </form>
+    <br>
+    <br>
+
+
+    <!-- An Example of an image with a hover over "name tag" -->
+
+    <img src="c:\Users\Temporary\OneDrive\Documents\New folder (2)\images\notepad-logo.avif" title="notepad-logo" alt="image of the notepad-logo"> <br>
+    <br>
+    <br>
+
+
+    <!-- An Example of an Audio On the web page -->
+    <br>
+    <br>
+    <audio controls="audioControls" autoplay loop draggable="false" type="audio/mpeg">
+
+        <source src="file:///D:/Patrick NOTES/New folder/New folder (2)/Oliver Mtukudzi/Oliver Mtukudzi - Neria .mp3" />
+
+        <source src="file:///D:/Patrick NOTES/New folder/New folder (2)/Oliver Mtukudzi/Oliver Mtukudzi - Neria .wav" />
+
+        Your Web browser does not support the audio element!
+
+        <!-- The Standard formats for web browsers are .mp3, .wav and .ogg -->
+
+    </audio>
+    <br>
+    <br>
+    <a href="file:///D:/Patrick NOTES/New folder/New folder (2)/Oliver Mtukudzi/Oliver Mtukudzi - Neria .mp3" download="custome_Oliver_Mtukudzi_Neria.mp3">Downnload The Audio Here!</a> <br>
+
+
+    <!-- An Example Of a video element on the web page -->
+    <br>
+    <br>
+    <video width="640" height="360" controls type="video/mp4">
+
+        <source src="file:///D:/Patrick NOTES/New folder/Lyric Music Videos/New folder/y2mate.com - Guess How Much I Love You Theme Song_360p.mp4" type="video/mp4"/>
+
+        <source src="file:///D:/Patrick NOTES/New folder/Lyric Music Videos/New folder/y2mate.com - Guess How Much I Love You Theme Song_360p.ogg" type="video/ogg"/>
+
+        Your browser does not support the video formats
+
+        <!-- The standard formats for web browsers are .mp4, webm and .ogg -->
+
+    </video>
+    <br>
+    <br>
+    <a href="file:///D:/Patrick NOTES/New folder/Lyric Music Videos/New folder/y2mate.com - Guess How Much I Love You Theme Song_360p.mp4" download="custome_y2mate.com - Guess How Much I Love You Theme Song_360p.mp4">Download The Video Here!</a> <br>
+
+    <!-- An example of the text box -->
+
+    <h4> Add a Comment </h4>
+
+    <form>
+        <label for="comments section"> Comments Section: </label>
+        <input type="text" id="comments section" name="comments section" placeholder="Type your comment here please">
+        <br>
+    </form>
+    <br>
+
+    <!-- Link at the bottom of the page to jump to the top -->
+    <a href="#top"> Jump to Top </a>
+
+    <!-- Anchor at the bottom of the page -->
+    <a id="bottom"> </a>
+
+</body>
+
+</html>

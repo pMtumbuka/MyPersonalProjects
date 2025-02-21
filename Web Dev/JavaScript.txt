@@ -1,0 +1,301 @@
+
+
+/***********************
+
+DOCUMENTATION ON JAVASCRIPT
+***********************/
+
+
+
+1.) ABOUT.HTML (INSIDE THE WEBPAGE)
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coyote Industries</title>
+
+    <!-- CSS code for modifying the image displayed on the website -->
+
+    <style>
+    
+        /* Attributes of the image displayed on the website */
+        img {
+
+            width: 300px;
+
+            border-radius: 25px;
+
+            float: left;
+
+            border-color: blue;
+
+            margin-right: 50px;
+
+            object-fit: cover;
+
+      }
+      
+    </style>
+
+</head>
+
+<body>
+
+    <!-- To Get back to the home page (index2.html)-->
+
+    <a href="../index2.html"> Home Page! </a>
+
+    <p>
+    
+    <img src="images/2009-Coyote-Yosemite.jpg" alt="An image of a Coyote">
+
+    </p>
+
+    <p> Coyote &amp; PMM &copy; &reg; &trade; &euro; </p>
+    
+</body>
+
+</html>
+
+
+
+2.) INDEX2.HTML (THE HOME PAGE OF THE WEBSITE)
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coyote Industries</title>
+
+    <!-- CSS code for modifying the image displayed on the website -->
+
+    <style>
+    
+        /* Attributes of the image displayed on the website */
+        img {
+
+            width: 500px;
+
+            border-radius: 250px;
+
+            float: left;
+
+            border-color: blue;
+
+            margin-right: 50px;
+
+            object-fit: cover;
+
+      }
+      
+    </style>
+
+</head>
+
+<body>
+
+    <!-- To provide a link to the company folder where the "about.html" document is locted -->
+
+    <a
+        href="company/about.html"> 
+        
+        About Us! 
+    
+        <img src="images/Document.jpg" alt="An image of a Coyote">    
+
+    </a>
+
+    <!-- To provide a downloadable photo of the coyote (Document.jpg) -->
+
+    <p> download the photo here </p> 
+
+    <a
+        href="images/Document.jpg" download> 
+        
+        <p> Our Photo </p> 
+    
+    </a>
+
+    <!-- Jump to CSS Section in the website -->
+
+    <a href="#section-css">CSS</a>
+
+    <!-- Jump to google from the website -->
+
+    <a href="https://google.com" target = "_blank"> Google </a>
+
+    <!-- Email Me -->
+
+    <a href="mailto:mtumbukamunthali@gmail.com"> Email Us </a>
+
+    <h2> HTML </h2>
+
+    <p> 
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum nostrum magni amet eum, culpa fugiat accusamus alias quia ducimus? Blanditiis repudiandae vel numquam ipsa ab aspernatur eum doloribus, quia in eligendi dignissimos dolores beatae harum molestias tempore ad quos autem tempora fugit ipsam velit. Est id accusamus doloribus in ratione! Molestiae dolor ipsum ipsa molestias quisquam mollitia porro, maiores quod praesentium fugiat fuga eum accusamus. Pariatur quia cum consectetur iure quam excepturi illo sit quaerat non consequuntur est dolor ratione quas, temporibus ullam magni hic, enim culpa labore, quidem quisquam! Libero ab quaerat, harum optio, maxime amet eveniet maiores eius quo iure saepe, ex fugit aut quod minus. Aliquam explicabo quisquam vel commodi quidem eaque nisi doloribus in consequatur maxime! 
+
+    </p>
+
+    <h2> CSS </h2>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, officia nulla tenetur doloremque dolore quaerat nihil repellendus facere totam quo consequuntur veniam perferendis ipsa. Dolor, ad eos! Rerum iusto nemo, doloribus eius nisi temporibus delectus quos error illum minima est molestiae ratione, animi recusandae! Error, doloremque, iste officia vero ipsam quos illo id impedit ratione sint eum. Quod nesciunt qui nemo et obcaecati voluptate. Corrupti enim cum sapiente officiis cupiditate beatae rem. At quae accusantium asperiores recusandae debitis, rerum ea, repudiandae soluta porro fugiat aut! Deleniti consequuntur veniam esse quia cum odio repellat facere, laboriosam nam neque, possimus vel, ipsam omnis qui repellendus tempore dolore consectetur corporis beatae aliquam nulla necessitatibus dicta ratione quas. Aliquid harum exercitationem molestiae nisi voluptatibus adipisci! Quasi aut repellat pariatur! Atque ut voluptates, esse quibusdam iure ratione neque quas, velit alias possimus tempore, reiciendis sequi quia corrupti quam expedita explicabo fuga culpa inventore. Enim, recusandae?
+    </p>
+
+    <!-- Jump to the top of the webpage from the bottom -->
+
+    <a href="#"> Jump to top </a>
+
+    <script src="index.js"></script>
+    
+</body>
+
+</html>
+
+
+
+
+3.) INDEX.JS (THE JAVASCRIPT CODE)
+
+
+
+
+  // This is my first JavaScript code!
+
+
+  	const interestRate = 15.6;
+
+ 	 console.log(interestRate);
+
+ 	 var isApproved = false;
+
+
+  // Objects in JavaScript
+
+
+ 	 const google = {
+
+   		 welcomeSign: 'Hello Google',
+
+  		 logo: undefined,
+
+   		 colour: null
+
+ 	 } ;
+
+
+  // Dot notation
+
+
+  	google.welcomeSign = 'Hello World';
+
+
+  // Bracket notation
+
+
+  	google['Hello JavaScript'];
+
+  	console.log(google);
+
+
+  // Arrays in JavaScript
+
+
+  	var selectedColours = ['red', 'blue'];
+
+  	selectedColours[2] = 2;
+
+  	console.log(selectedColours.length);
+
+
+  // Funnctions in JavaScript
+
+
+  	function greet(sign) {
+
+    		console.log('Hello HTML, CSS & JavaScript ' + sign);
+
+ 	}
+
+  	greet();
+
+  	greet('Hello world');
+
+
+
+
+
+<script>
+        function click() {
+            const heading = document.querySelector('h1');
+            if (heading.innerHTML === 'videos') {
+                heading.innerHTML = 'audios';
+            } else {
+                heading.innerHTML = 'videos';
+            }
+        }
+</script>
+
+
+
+<script>
+        function click() {
+            const heading = document.querySelector('h1');
+            if (heading.innerHTML === 'videos') {
+                heading.innerHTML = 'audios';
+            } else {
+                heading.innerHTML = 'videos';
+            }
+</script>
+
+
+
+
+
+<script>
+        function count() {
+            counter++;
+            alert(counter);
+        }
+</script>
+
+
+ function click() {
+            const heading = document.querySelector('h1');
+            if (heading.innerHTML === 'videos') {
+                heading.innerHTML = 'audios';
+            } else {
+                heading.innerHTML = 'videos';
+            }
+        }
+
+
+ <button ondblclick="count()"> Count </button>
+    <br>
+
+
+<button onclick="click('h1')"> Click Here </button>
+    <br>
+
+
+document.querySelector('h1')

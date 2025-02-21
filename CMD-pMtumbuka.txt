@@ -1,0 +1,197 @@
+
+CMD COMMANDS
+
+
+1. Battery Report
+
+
+C:\Windows\system32>powercfg /energy
+
+C:\Windows\system32>powercfg /batteryreport
+
+C:\Windows\system32>C:\Windows\system32\battery-report.html
+
+
+2. Assoc
+
+
+C:\Windows\system32>assoc
+
+C:\Windows\system32>assoc .mp4=VLC.vlc
+
+
+3. Scan PC
+
+
+C:\Windows\system32>chkdsk /f /r
+
+C:\Windows\system32>sfc /scannow
+
+C:\Windows\system32>DISM /Online /Cleanup-Image /CheckHealth
+
+C:\Windows\system32>DISM /Online /Cleanup-Image /ScanHealth
+
+C:\Windows\system32>DISM /Online /Cleanup-Image /restoreHealth
+
+C:\Windows\system32>DISM /Online /Cleanup-Image /RestoreHealth /Source:repairSource\install.wim
+
+
+4. Taskkill
+
+
+C:\Windows\system32>tasklist | findstr script
+
+C:\Windows\system32>taskkill /f /im notepad.exe
+SUCCESS: The process "notepad.exe" with PID 2696 has been terminated.
+
+C:\Windows\system32>taskkill /f /pid 1268
+SUCCESS: The process with PID 1268 has been terminated.
+
+
+5. Reset PC
+
+
+C:\Windows\system32>systemreset --factoryreset [format PC]
+
+C:\Windows\system32>systemreset -cleanpc [reset PC]
+
+C:\Windows\system32>rstrui.exe [Run system restore from command prompt]
+
+C:\Windows\system32>del /q /f /s %temp%\*
+
+
+6. Hide And Unhide A File
+
+
+C:\Windows\system32>attrib +h +s +r the name of the folder [hide any folder]
+
+C:\Windows\system32>attrib -h -s -r the name of the folder [unhide any folder]
+
+C:\Windows\system32>wmic product get name [show all installed programs]
+
+C:\Windows\system32>driverquery [know all about installed drivers]
+
+C:\Windows\system32>systeminfo
+
+
+ 7. Change Font Preferences
+
+
+C:\Windows\system32>help color [change text color]
+
+C:\Windows\system32> |clip [copy the results of a command]
+
+C:\Windows\system32>arp -a [show arp table]
+
+C:\Windows\system32>ver [windows version]
+
+C:\Windows\system32>cleanmgr [clean any drive of pc]
+
+C:\Windows\system32>title [change title of cmd window]
+
+
+
+8. View Computers Connected to your PC
+
+
+
+C:\Windows\system32>net view
+
+C:\Windows\system32>net statistics
+
+C:\Windows\system32>net statistics srv
+
+F7
+
+
+
+9. Configure Office Setup
+
+
+
+C:\Office 2019>setup.exe /configure configuration.xml
+
+http://config.office.com
+
+office deployment tool
+
+KMSAuto
+
+https://techmaina.com/microsoft-office-2019-product-key/
+
+
+
+10. Acivate Microsoft Office
+
+
+cd /d C:\Program Files (x86)\Microsoft Office\Office16
+
+C:\Program Files (x86)\Microsoft Office\Office16>for /f %x in ('dir /b ..\root\Licenses16\ProPlus2019VL_KMS*.xrm-ms') do cscript ospp.vbs inslic:"..\root\Licenses16\%x"
+
+
+wmic path softwareLicensingService get OA3xOriginalProductKey
+
+REG DELETE "HKCU\SOFTWARE\Microsoft\Windows Script Host\Settings" /v Enabled /f
+
+REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Script Host\Settings" /v Enabled /f
+
+wscript ospp.vbs /dstatus
+
+Cscript ospp.vbs /dstatus
+
+
+
+
+
+
+cd /d %ProgramFiles(x86)%\Microsoft Office\Office16
+cd /d %ProgramFiles%\Microsoft Office\Office16
+
+
+
+
+for /f %x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+
+
+
+
+cscript ospp.vbs /setprt:1688
+cscript ospp.vbs /unpkey:6F7TH >nul
+cscript ospp.vbs /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH
+cscript ospp.vbs /sethst:107.175.77.7
+cscript ospp.vbs /act
+
+
+
+
+11. Activate Windows 11
+
+
+
+
+Microsoft Windows [Version 10.0.26100.2894]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\System32>slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+
+C:\Windows\System32>slmgr /ato
+
+C:\Windows\System32>slmgr /xpr
+
+C:\Windows\System32>slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+
+C:\Windows\System32>slmgr /skms
+
+C:\Windows\System32>slmgr /skms
+
+C:\Windows\System32>slmgr /ato
+
+C:\Windows\System32>slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+
+C:\Windows\System32>slmgr /skms kms.msguides.com
+
+C:\Windows\System32>slmgr /ato
+
+C:\Windows\System32>
+
+

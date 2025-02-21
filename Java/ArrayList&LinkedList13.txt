@@ -1,0 +1,92 @@
+
+
+/**************
+
+DOCUMENTATION OF THE DIFFERENCES BETWEEN ARRAY LISTS < > & LINKED LISTS < > ( INSERTIONS, SEARCHINGS & DELETIONS ) 1.13
+
+**************/
+
+
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        long n = (long) 1E7;
+
+        ArrayList simpleList = new ArrayList<>();
+
+        long milliSeconds = System.currentTimeMillis();
+        for (int i = 0; i < n; i++ ) {
+
+            simpleList.add(i);
+
+        }
+
+        // The Time it takes to insert an element in an ArrayList
+
+        System.out.println("insterted arrayList takes " + (System.currentTimeMillis() - milliSeconds) + " ms" );
+
+        LinkedList complicatedList = new LinkedList<>();
+
+        milliSeconds = System.currentTimeMillis();
+        for (int i = 0; i < n; i++) {
+
+            complicatedList.add(i);
+
+        }
+
+        // The Time it takes to insert an element in a LinkedList
+
+        System.out.println("insterted linkedList takes " + (System.currentTimeMillis() - milliSeconds) + " ms" );
+
+
+        // The Time it takes to delete an element from an ArrayList
+
+        milliSeconds = System.currentTimeMillis();
+        simpleList.remove(0);
+        System.out.println("deleted front arrayList takes " + (System.currentTimeMillis() - milliSeconds) + " ms" );
+
+
+        // The Time it takes to delete an element from a LinkedList
+
+        milliSeconds = System.currentTimeMillis();
+        complicatedList.remove(0);
+        System.out.println("deleted front linkedList takes " + (System.currentTimeMillis() - milliSeconds) + " ms" );
+
+
+        // The Time it takes to search for an element in an ArrayList
+
+        milliSeconds = System.currentTimeMillis();
+        simpleList.get((int) n / 2);
+        System.out.println("getting front arrayList takes " + (System.currentTimeMillis() - milliSeconds) + " ms" );
+
+
+        // The Time it takes to search for an element in a LinkedList
+        
+        milliSeconds = System.currentTimeMillis();
+        complicatedList.get((int) n / 2);
+        System.out.println("getting front linkedList takes " + (System.currentTimeMillis() - milliSeconds) + " ms" );
+
+    }
+
+}
+
+
+
+insterted arrayList takes 2625 ms
+
+insterted linkedList takes 3967 ms
+
+deleted front arrayList takes 137 ms
+
+deleted front linkedList takes 0 ms
+
+getting front arrayList takes 0 ms
+
+getting front linkedList takes 172 ms
+      

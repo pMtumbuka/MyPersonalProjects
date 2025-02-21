@@ -1,0 +1,252 @@
+
+public class Main {
+    public static void main(String[] args) {
+        // Implicit casting
+	 // byte > short > int > long > float > double
+        short x = 1;
+        int y = x + 2;
+
+	double x = 1.1;
+        double y = x + 2;
+
+	int y = (int)x + 2;
+
+	String x = "1";
+        int y = Integer.parseInt(x) + 2;
+	double y = Double.parseDouble(x) + 2;
+
+
+
+
+ int result = Math.round(1.1F);
+ int result = (int)Math.ceil(1.1F);
+ int result = (int)Math.floor(1.1F);
+ int result = (int)Math.max(1.1, 0.1);
+ int result = (int)Math.min(1.1, 0.1);
+ int result = (int)Math.random();
+ int result = (int)(Math.round(Math.random() * 1000));
+ int result = (int)(Math.random() * 1000);
+
+
+
+
+
+NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String result = currency.format(1234567.474);
+
+NumberFormat percent = NumberFormat.getPercentInstance();
+        String result = percent.format(0.1);
+
+String result = NumberFormat.getPercentInstance().format(0.1);
+
+        System.out.println(y);
+    }
+}
+
+
+
+
+
+
+order of operators in Java
+
+1. ()
+
+2. */
+
+3. +-
+
+
+
+
+final float PI = 3.14F;
+
+     double result = (double)10 / (double)3;
+
+     int x = 1;
+     x += 2;
+
+
+
+Scanner scan = new Scanner (System.in);
+
+      System.out.println("Enter Your Variable Here");
+
+double user_variables = scan.nextDouble(); 
+
+     double x, y, z, answer;
+		x = 20;
+		y = 30;
+		z = 40;
+		answer = x / y / z;
+
+
+
+
+
+
+ // Implicit casting
+        short x = 1;
+        int y = x + 2;
+
+Scanner scanner = new Scanner(System.in);
+        byte age = scanner.nextByte();
+        System.out.println( "You Are" + age);
+
+Scanner scanner = new Scanner(System.in);
+        System.out.print("Name: ");
+        String Name = scanner.nextLine().trim();
+        System.out.println( "You Are " + Name);
+
+
+
+
+
+
+package lesson1;
+
+public class MyClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int value = 20;
+		
+		if (value == 30) {
+			System.out.println("Yes value == 20");
+			
+			}
+		else {
+			System.out.println("No value != 20");
+		}
+
+	}
+
+}
+
+
+
+
+
+
+package lesson1;
+
+public class MyClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int subject1 = 95;
+		int subject2 = 85;
+		
+		
+		if ((subject1 >= 30) && / || (subject2 == 80)) {
+			System.out.println("Yes value >= 20");
+			
+			}
+		else {
+			System.out.println("No value is not >= 20");
+		}
+
+	}
+
+}
+
+
+
+
+
+
+while (subject1 >= 30) {
+			System.out.println(subject1);
+			subject1++; / subject1--;
+	}
+
+
+
+int subject2 = 0;
+
+		do {
+			System.out.println(subject2);
+			subject2++;
+		} while (subject2 <= 12);
+
+
+
+
+int[] myIntArrary = {1,2,3,4,5,6,7,8,9};
+	}
+	int index = 0;
+
+/*
+int[] myIntArrary = new int[3];
+int[] myIntArrary = {1,2,3};	
+int[] myIntArrary = new int[]{1,2,3};
+*/
+
+
+
+
+String[] namesOfStudents = {"Patrick", "Isaac", "Dyton", "Mayamiko"};
+	System.out.println(namesOfStudents[0]);
+
+
+
+
+
+int[] myIntArrary = {1,2,3,4,5,6,7,8,9};
+	
+	int index = 0;{
+	
+	 while (index < 9) {
+	
+		System.out.println(myIntArrary[index]);
+		 index++;
+	 }
+
+
+
+
+
+
+String[] namesOfStudents = {"Patrick", "Isaac", "Dyton", "Mayamiko"};
+	
+	for (int index = 0; index < 4; index++)
+		
+	System.out.println(namesOfStudents[index]);
+
+
+	
+
+int[] myIntArrary = {1,2,3,4,5,6,7,8,9};
+	
+	int index = 0;{
+	
+	 do {
+	
+		System.out.println(myIntArrary[index]);
+		 index++;
+	 } while (index < 9);
+
+
+
+
+
+String[] namesOfStudents = {"Patrick", "Isaac", "Dyton", "Mayamiko"};
+	
+	
+	for (int index = 0; index < 4; index++) {
+		
+	System.out.println(namesOfStudents[index]);
+	
+	}
+	System.out.println("-------------");
+	
+	for (String element : namesOfStudents) {
+		
+		System.out.println(element);
+		
+	}
+
+String myMeshos = "Isaac " + "Mayamiko"; 
+	System.out.println(myMeshos.replace('a', 'e'));

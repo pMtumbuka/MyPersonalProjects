@@ -1,0 +1,8 @@
+// GETTING STARTED IN REACT
+
+	1. USING NPX
+		npx create-react-app <project-name>
+		npm package manager
+	2. USING NPM 
+		npm install create-react-app -g
+		create-react-app<project-name> 

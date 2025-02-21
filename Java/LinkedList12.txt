@@ -1,0 +1,83 @@
+
+
+/**************
+
+DOCUMENTATION OF THE LINKED LISTS < > 1.12
+
+**************/
+
+
+
+import java.util.LinkedList;
+
+public class MyClass {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        LinkedList < Character > myList = new LinkedList < Character >();
+
+        myList.add(0, 'P');
+
+        myList.add(1, 'A');
+
+        myList.add(2, 'T');
+
+        myList.add(3, 'R');
+
+        myList.add(4, 'I');
+
+        myList.add(5, 'C');
+
+        myList.add(6, 'K');
+
+        for ( Character myName: myList)
+            System.out.println(myName);
+
+        System.out.println("The size of the List is " + myList.size());
+
+        myList.addFirst('/');
+
+        myList.addLast('\\');
+
+        for ( Character myName: myList)
+            System.out.println(myName);
+
+        System.out.println("The size of the List is " + myList.size());
+
+        System.out.println("Hello \rPATRICK");
+
+
+
+
+    }
+
+}
+
+
+
+P
+A
+T
+R
+I
+C
+K
+
+The size of the List is 7
+
+/
+P
+A
+T
+R
+I
+C
+K
+\
+
+The size of the List is 9
+
+PATRICK
+
+      

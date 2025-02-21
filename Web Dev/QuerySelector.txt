@@ -1,0 +1,266 @@
+
+
+/***********************
+
+DOCUMENTATION ON QUERY SELECTROS IN JAVASCRIPT 
+
+***********************/
+
+
+
+document.querySelector('button').onclick = clickable;
+
+`document.querySelector()` is a method in JavaScript that allows you to select a single element from the DOM (Document Object Model) using a CSS selector. It returns the first element within the document that matches the specified selector.
+
+Here's the basic syntax:
+
+```javascript
+var element = document.querySelector(selector);
+```
+
+Where:
+- `selector` is a string representing the CSS selector you want to use to match the element.
+
+For example, if you have an HTML document with an element like this:
+
+```html
+<div id="myDiv">Hello, world!</div>
+```
+
+You can select this element using `document.querySelector()` like so:
+
+```javascript
+var myDiv = document.querySelector('#myDiv');
+```
+
+This will return the `<div>` element with the `id` of `"myDiv"`. You can then manipulate this element using JavaScript. If no element matches the selector, `null` is returned.
+
+
+
+
+/***********************
+
+DOCUMENTATION ON QUERY SELECTROS IN JAVASCRIPT 
+
+***********************/
+
+
+
+
+If you're encountering an "uncaught" error when using `document.querySelector()`, it typically means that your code is attempting to access an element that doesn't exist in the DOM, or there's a mistake in your selector. Here are some common reasons why you might encounter an "uncaught" error:
+
+1. **Element not found**: If the selector you're using doesn't match any elements in the DOM, `document.querySelector()` will return `null`. If you try to perform operations on `null`, it can result in an "uncaught" error. To avoid this, ensure that your selector matches an existing element in your HTML.
+
+2. **Typographical errors in the selector**: Ensure that the selector string you pass to `document.querySelector()` is correct and matches the intended element. Common errors include misspelling IDs or class names.
+
+3. **Timing**: If your JavaScript code is executing before the DOM has finished loading, `document.querySelector()` won't find the element you're looking for. Ensure that your JavaScript code executes after the DOM has fully loaded, either by placing your script at the bottom of the HTML body or by wrapping your code in a DOMContentLoaded event listener.
+
+Here's an example of how you might use a DOMContentLoaded event listener to ensure your JavaScript code executes after the DOM has loaded:
+
+```javascript
+document.addEventListener('DOMContentLoaded', function() {
+    // Your code here
+    var element = document.querySelector('.myClass');
+    console.log(element);
+});
+```
+
+This ensures that your code won't run until after the DOM has fully loaded, preventing "uncaught" errors related to accessing elements before they exist in the DOM.
+
+
+<script>
+        function clickable() {
+            const heading = document.querySelector('h1');
+            if (heading.innerHTML === "videos") {
+                heading.innerHTML = "audios";
+            } else {
+                heading.innerHTML = "videos";
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('button').onclick = clickable;
+        });
+</script>
+
+
+<button onclick="clickable()"> Click Here </button>
+<br>
+
+<h1>videos</h1>
+
+
+
+/***********************
+
+DOCUMENTATION ON BUTTON <button> ELEMENT IN HTML
+
+***********************/
+
+
+
+
+The `<button>` element in HTML has several attributes that can be used to control its behavior and appearance. Here are some common attributes along with the values they can take:
+
+1. **`type`**: Specifies the type of button. Values can be:
+   - `submit`: Submits the form data to the server.
+   - `reset`: Resets the form data to its initial values.
+   - `button`: (default) Just a clickable button with no default behavior.
+
+Example: `<button type="submit">Submit</button>`
+
+2. **`name`**: Specifies the name of the button, used when submitting form data to the server.
+
+Example: `<button name="myButton">Click Me</button>`
+
+3. **`value`**: Specifies the initial value of the button, used when submitting form data to the server.
+
+Example: `<button value="Submit">Submit</button>`
+
+4. **`disabled`**: Specifies that the button should be disabled. It takes no value, just presence or absence.
+
+Example: `<button disabled>Disabled Button</button>`
+
+5. **`form`**: Specifies one or more forms the button belongs to.
+
+Example: `<button form="myForm">Submit</button>`
+
+6. **`formaction`**: Specifies the URL where to submit the form data when the button is clicked. It overrides the `action` attribute of the `<form>` element.
+
+Example: `<button formaction="/submit_form.php">Submit</button>`
+
+7. **`formmethod`**: Specifies the HTTP method to be used when submitting the form. Values can be `get` or `post`.
+
+Example: `<button formmethod="post">Submit</button>`
+
+8. **`formenctype`**: Specifies how form data should be encoded before sending it to the server. Values can be `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`.
+
+Example: `<button formenctype="multipart/form-data">Submit</button>`
+
+9. **`formtarget`**: Specifies where to display the response after submitting the form. Values can be `_self`, `_blank`, `_parent`, `_top`, or a frame name.
+
+Example: `<button formtarget="_blank">Submit</button>`
+
+These are some of the most commonly used attributes of the `<button>` element in HTML.
+
+
+
+/***********************
+
+DOCUMENTATION ON BUTTON <button> ELEMENT IN HTML
+ 
+***********************/
+
+
+
+
+In HTML, the `data-*` attributes provide a way to store custom data in HTML elements. These attributes are useful for attaching additional information to elements that can be accessed via JavaScript or CSS. While `data-*` attributes are not specific to the `<button>` element, they can be used with any HTML element, including buttons.
+
+Here's how you can use `data-*` attributes with a `<button>` element:
+
+```html
+<button data-custom="value">Button</button>
+```
+
+In this example, `data-custom` is a custom attribute, and `"value"` is the value associated with it. You can replace `"custom"` with any descriptive name you want, and `"value"` can be any string or data you want to store.
+
+You can have multiple `data-*` attributes on a single element:
+
+```html
+<button data-id="123" data-category="music">Button</button>
+```
+
+To access the data stored in `data-*` attributes using JavaScript:
+
+```javascript
+var button = document.querySelector('button');
+var id = button.dataset.id; // Retrieves the value of data-id attribute
+var category = button.dataset.category; // Retrieves the value of data-category attribute
+```
+
+In this JavaScript code, `dataset` is an object that contains all the `data-*` attributes of the element. You can access individual `data-*` attributes by using their names without the `"data-"` prefix.
+
+Using `data-*` attributes provides a convenient way to store custom data associated with HTML elements, making your HTML more expressive and providing hooks for dynamic behavior in your JavaScript code.
+
+
+
+
+/***********************
+
+DOCUMENTATION ON QUERY SELECTROS IN JAVASCRIPT 
+
+***********************/
+
+
+
+
+
+<script>
+        function hello() {
+            alert('Welcome All, Welcome Home');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // change colour to red
+            document.querySelector('#red').onclick = function() {
+                document.querySelector('#film').style.color = 'red';
+            }
+
+            // change colour to red
+            document.querySelector('#blue').onclick = function() {
+                document.querySelector('#film').style.color = 'blue';
+            }
+
+            // change colour to red
+            document.querySelector('#green').onclick = function() {
+                document.querySelector('#film').style.color = 'green';
+            }
+        });
+</script>
+
+
+
+
+ <button onclick="hello()"> Welcome </button>
+    <br>
+
+    <!-- anchor for the bottom link -->
+    <a id="top"></a>
+
+    <h1 id="film"> videos </h1>
+
+    <button id="red">Red</button>
+
+    <button id="blue">Blue</button>
+
+    <button id="green">Green</button>
+    <br>
+    <br>
+
+
+
+In JavaScript, `querySelector` is a method that allows you to select elements from the DOM (Document Object Model) using CSS selector syntax. It returns the first element within the document that matches the specified selector(s).
+
+Here's how you can use `querySelector`:
+
+```javascript
+// Select the first element with class "example"
+const element = document.querySelector('.example');
+
+// Select the first <p> element inside an element with id "container"
+const paragraph = document.querySelector('#container p');
+
+// Select the first element with the "active" class inside a <div> element
+const activeElement = document.querySelector('div .active');
+
+// Select the first element with the id "myElement"
+const myElement = document.querySelector('#myElement');
+
+// Select the first element with the attribute "data-id" equal to "123"
+const elementWithDataId = document.querySelector('[data-id="123"]');
+```
+
+If no matches are found, `querySelector` returns `null`.
+
+Remember, `querySelector` only returns the first match. If you want to select multiple elements, you can use `querySelectorAll`, which returns a NodeList containing all the matches.
+
+

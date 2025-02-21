@@ -1,0 +1,276 @@
+
+
+
+/***********************
+
+DOCUMENTATION ON CASCADING STYLE SHEETS
+
+***********************/
+
+
+
+
+CSS stands for Cascading Style Sheets. It's a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS describes how elements should be rendered on screen, in print, or in other media. It allows web designers and developers to control the layout, colors, fonts, and other visual aspects of a web page. CSS works by selecting HTML elements and applying various styles to them, such as colors, fonts, margins, padding, and positioning. It helps in separating the content of a webpage from its presentation, making websites more flexible, maintainable, and responsive.
+
+
+The `<style>` element is an HTML tag used to embed CSS (Cascading Style Sheets) directly within an HTML document. It allows you to define styles for HTML elements without needing to use an external CSS file. Here's how it's typically used:
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: darkblue;
+        }
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <p>This is an example paragraph.</p>
+</body>
+</html>
+```
+
+In this example, the `<style>` element is placed inside the `<head>` section of the HTML document. Within the `<style>` element, CSS rules are written to style various HTML elements. These styles apply only to the HTML document in which they are defined.
+
+
+
+/***********************
+
+DOCUMENTATION ON LINKING TO AN EXTERNAL CSS FILE
+
+***********************/
+
+
+
+The `src` attribute is not typically used with the `<style>` element in HTML. However, if you're referring to the `src` attribute commonly used with other HTML elements like `<script>` or `<img>`, it's not applicable to the `<style>` element.
+
+The `<style>` element is used to define CSS styles directly within the HTML document, either by embedding the styles within the `<style>` tags or by linking to an external CSS file. Here's an example of both methods:
+
+1. Embedding styles:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embedded Styles</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <p>This is an example paragraph.</p>
+</body>
+</html>
+```
+
+2. Linking to an external CSS file:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External Styles</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <p>This is an example paragraph.</p>
+</body>
+</html>
+```
+
+In the second example, the `<link>` element is used to include an external CSS file (`styles.css`) in the HTML document.
+
+
+
+/***********************
+
+DOCUMENTATION ON THE LINK <link> ELEMENT ATTRIBUTES AND THE VALUES THAT THEY TAKE
+
+***********************/
+
+
+
+
+The `<link>` tag in HTML is primarily used to link external resources such as CSS files, icon files, or font files to an HTML document. It has several attributes that control how the linked resource is interpreted and applied. Here are the main attributes and the values they can take:
+
+1. **rel**: Specifies the relationship between the current document and the linked resource. Common values include:
+   - `"stylesheet"`: Indicates that the linked resource is a stylesheet (CSS).
+   - `"icon"`: Specifies that the linked resource is an icon (favicon).
+   - `"preload"`: Suggests that the linked resource should be preloaded.
+   - `"prefetch"`: Suggests that the linked resource should be fetched in the background.
+   - `"alternate"`: Specifies an alternate version of the current document.
+   - `"canonical"`: Specifies the preferred URL for duplicate or similar content.
+   - `"next"`, `"prev"`, `"first"`, `"last"`: Used for indicating navigation links.
+
+2. **href**: Specifies the URL of the linked resource. It can be a relative or absolute URL.
+
+3. **type**: Specifies the MIME type of the linked resource. For stylesheets, it's typically set to `"text/css"`.
+
+4. **sizes**: Specifies the sizes of the icons for different display contexts. It's used when the `rel` attribute is set to `"icon"`.
+
+5. **media**: Specifies the media type or media query for which the linked resource is intended. For example:
+   - `"screen"`: For screens and devices with color capabilities.
+   - `"print"`: For printers and documents viewed in print preview mode.
+   - `"all"`: For all devices.
+
+6. **as**: Specifies the type of the linked resource. This attribute is used for resources fetched with the `rel="preload"` or `rel="prefetch"` attributes.
+
+Here's an example of how the `<link>` tag can be used to link a stylesheet:
+
+```html
+<link rel="stylesheet" type="text/css" href="styles.css">
+```
+
+And here's an example of how it can be used to link an icon (favicon):
+
+```html
+<link rel="icon" type="image/png" href="favicon.png">
+```
+
+These examples demonstrate how different attributes of the `<link>` tag are used to link various types of external resources to an HTML document.
+
+
+
+
+/***********************
+
+DOCUMENTATION ON THE DIV <div> ELEMENT 
+
+***********************/
+
+
+
+
+
+The `<div>` element in HTML is a fundamental building block used for creating layouts and organizing content on a web page. It's a generic container that doesn't have any specific meaning or styling by itself. Instead, it's used to group together other HTML elements and apply styles or behavior to them collectively.
+
+Here's a basic example of how the `<div>` element is used:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <style>
+        /* Example CSS for styling div elements */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+</div>
+
+</body>
+</html>
+```
+
+In this example, the `<div class="container">` element serves as a container for the heading and paragraphs. It has a class attribute (`class="container"`) that can be used to apply CSS styles specifically to this `<div>` element. You can add more `<div>` elements with different classes to create different sections of the webpage and style them individually.
+
+
+
+/***********************
+
+DOCUMENTATION ON THE DOWNLOAD ATTRIBUTE IN THE ANCHOR <a> ELEMENT
+
+***********************/
+
+
+
+
+
+The `download` attribute is used within the `<a>` (anchor) element in HTML to specify that the target resource should be downloaded when a user clicks on the link, rather than navigated to directly. This attribute is particularly useful for links that point to downloadable files like images, documents, or multimedia files.
+
+Here's how you would use the `download` attribute:
+
+```html
+<a href="path/to/your/file.ext" download>Download File</a>
+```
+
+In this example:
+
+- `href`: Specifies the URL of the file to be downloaded.
+- `download`: This attribute, when present, indicates that the file should be downloaded instead of navigating to it. If the value of the attribute is specified, it will be used as the filename for the downloaded file. If not specified, the original filename will be used.
+
+Here's an example where you specify the filename:
+
+```html
+<a href="path/to/your/file.ext" download="custom_filename.ext">Download File</a>
+```
+
+When a user clicks on this link, the browser will initiate a download of the file specified in the `href` attribute, and if a `download` attribute is present, the browser will use the specified filename for the downloaded file.
+
+
+
+/***********************
+
+DOCUMENTATION ON THE DOWNLOAD ATTRIBUTE IN THE ANCHOR <a> ELEMENT
+
+***********************/
+
+
+
+
+For video and image files, the `download` attribute functions similarly to other types of files. When used within an `<a>` element, it prompts the browser to download the linked resource instead of opening it directly in the browser window. Here's how you can use it for video and image files:
+
+### Video File:
+
+```html
+<a href="path/to/your/video.mp4" download>Download Video</a>
+```
+
+In this case, clicking on the link will prompt the user to download the video file specified in the `href` attribute.
+
+### Image File:
+
+```html
+<a href="path/to/your/image.jpg" download>Download Image</a>
+```
+
+Similarly, clicking on the link will prompt the user to download the image file specified in the `href` attribute.
+
+You can also provide a custom filename for the downloaded file:
+
+```html
+<a href="path/to/your/video.mp4" download="custom_video_name.mp4">Download Video</a>
+```
+
+```html
+<a href="path/to/your/image.jpg" download="custom_image_name.jpg">Download Image</a>
+```
+
+In these examples, when the user clicks on the link, the browser will initiate the download of the video or image file with the specified custom filename. If no custom filename is provided, the browser will use the original filename.
+
+
+

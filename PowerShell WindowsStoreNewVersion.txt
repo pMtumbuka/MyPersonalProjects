@@ -1,0 +1,11 @@
+Open PowerShell.
+
+Use the cd command to navigate to the location where you’ve saved the Store update. For example, if your browser’s default downloads location is the “Downloads” folder, type cd C:\Users\username\Downloads
+
+Type Add-AppxPackage <package name.msixbundle>.
+
+In this case, the final command would be:
+
+Add-AppxPackage Microsoft.WindowsStore_22110.1401.10.0_neutral___8wekyb3d8bbwe.Msixbundle
+
+If an error message states that you need framework “Microsoft.UI.Xaml.2.7, simply download and install the framework from here.

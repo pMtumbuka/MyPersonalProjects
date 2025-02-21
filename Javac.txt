@@ -1,0 +1,55 @@
+Microsoft Windows [Version 10.0.10586]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>javac Main.java
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>dir
+ Volume in drive C has no label.
+ Volume Serial Number is A836-3CDB
+
+ Directory of C:\Users\Temporary\IdeaProjects\Hello World\src
+
+02/15/2023  12:05 AM    <DIR>          .
+02/15/2023  12:05 AM    <DIR>          ..
+02/15/2023  12:05 AM               414 Main.class
+02/14/2023  11:08 PM               116 Main.java
+               2 File(s)            530 bytes
+               2 Dir(s)  14,549,377,024 bytes free
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>java Main
+Hello world!
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>
+
+
+Microsoft Windows [Version 10.0.10586]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>javac Main.java
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>java Main
+Hello World! El' Mundo Mas A Grande
+     Hello World! El' Mundo Mas A Grande
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>dir
+ Volume in drive C has no label.
+ Volume Serial Number is A836-3CDB
+
+ Directory of C:\Users\Temporary\IdeaProjects\Hello World\src
+
+02/15/2023  02:11 AM    <DIR>          .
+02/15/2023  02:11 AM    <DIR>          ..
+02/15/2023  02:15 AM               608 Main.class
+02/15/2023  02:11 AM               321 Main.java
+               2 File(s)            929 bytes
+               2 Dir(s)  14,825,345,024 bytes free
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>
+
+
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>javac Main.java [Activation of java compiler]
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>dir
+
+C:\Users\Temporary\IdeaProjects\Hello World\src>java Main [view contents of the main folder / running the code]

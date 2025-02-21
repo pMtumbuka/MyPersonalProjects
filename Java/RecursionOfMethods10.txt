@@ -1,0 +1,58 @@
+
+
+/*************
+
+DOCUMENTATION ON RECURSION OF METHODS (THE FACTORIAL EXAMPLE) 1.10
+
+************/
+
+public class MyClass {
+
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+
+                // Step 1: Call the Factorial method and store the result in a valiable 
+
+                float result = (float) factorial((5));
+
+
+                // Step 2: Print the result
+
+                System.out.println("Factorial of 5: " + result);
+            }
+
+
+            
+            // Step 3: Define the factorial method
+
+
+            public static float factorial(float n) {
+
+
+                // Step 4: Check if the value of n is 0 or 1 (base case)
+
+
+                if (n == 0 || n == 1) {
+
+                    // Step 5: If n is 0 or 1, return 1
+
+                    return 1;
+
+                } else {
+
+                    // Step 6: If n is not 0 or 1, call the factorial method recuesively with n - 1
+
+                    // Step 7: Multiply the current value of n with the result of the reculsive call
+
+                    return n * factorial(n - 1);
+                }
+            }
+
+}
+
+    
+
+    
+	
