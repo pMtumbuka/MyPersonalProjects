@@ -1,0 +1,157 @@
+
+
+THE FOLLOWING ARE THE SOURCES I USED TO WRITE THE CODE FOR THE HTTP SERVER:
+
+
+
+OPEN SOURCE CODES FROM THE OFFICIAL DOCUMENTATIONS OF PYTHON "docs.python.org" FROM 
+
+"https://docs.python.org/3/library/http.server.html" 
+
+
+
+THEIR OFFICIAL GITHUB REPOSITORY FOR THE SOURCE CODES ON THE HTTP SERVER 
+
+"https://github.com/python/cpython/blob/3.13/Lib/socket.py"   
+
+"https://github.com/python/cpython/blob/main/Lib/http/server.py"
+
+
+
+
+
+
+the source code of the pythons http_server in the GitHub repository of "python.org"
+
+
+
+https://github.com/python/cpython/blob/main/Lib/http/server.py
+
+
+
+	(1.) The class HTTPServer(HTTPServer): 
+
+		
+		python source code from line number 154
+
+	
+
+	(2.) The class BaseHTTPRequestHandler(socketserver.StreamRequestHandler):
+
+	
+		python source code from line number 195
+
+			
+			(a.) the "send_response(self):" function defined on line number 542
+
+			(b.) the "end_header()" function line defined on line number 583
+
+
+
+	(3.) The class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
+
+		
+		python source code from line number 695
+
+		
+			(a.) the "do_GET(self):" function defined from line number 723
+
+			(b.) the "do_HEAD(self):" function defined from line number 732
+
+			(c.) the "do_POST(self):" function defined from line number 1052
+
+
+
+
+
+
+Creating a Python Web Server: From Basic to Advanced
+
+
+Handling GET Requests: Serving HTML files and Default Paths
+
+
+Handling POST Requests: Parsing Form Data and Sending Responses
+
+
+https://anshu-dev.medium.com/creating-a-python-web-server-from-basic-to-advanced-449fcb38e93b
+
+
+https://gist.github.com/mafayaz/faf938a896357c3a4c9d6da27edcff08
+
+
+
+
+
+HTTP request methods
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods
+
+
+
+
+	(1.) GET 
+
+		https://httpwg.org/specs/rfc9110.html#GET
+
+	(2.) PUT
+
+		https://httpwg.org/specs/rfc9110.html#PUT
+			
+	(3.) HEAD
+
+		https://httpwg.org/specs/rfc9110.html#HEAD
+
+	(4.) POST
+		
+		https://httpwg.org/specs/rfc9110.html#POST
+
+
+	(5.) OTHERS (NOT USED IN MY SERVER)
+		
+		OPTIONS, TRACE, DELETE, PATCH, CONNECT
+
+
+
+
+
+
+HTTP response status codes
+
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status#client_error_responses
+
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status
+
+
+	(1.) the "2XX" status codes == "Successful responses"
+
+	(2.) the "3XX" status codes == "Redirection messages"
+
+	(3.) the "4XX" status codes == "Client error responses"
+
+
+
+
+
+
+
+the general python's default server source code from the official GitHub repository of python.org
+
+
+
+https://github.com/python/cpython/blob/3.13/Lib/socket.py
+
+
+
+	(1.) The socket() class
+
+		python source code from line number 215
+
+
+
+
+
