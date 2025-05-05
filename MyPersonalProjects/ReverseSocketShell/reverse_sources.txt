@@ -1,0 +1,26 @@
+
+socket — Low-level networking interface
+
+
+Source code: Lib/socket.py
+
+
+https://github.com/python/cpython/blob/3.13/Lib/socket.py
+
+
+
+
+Socket Programming in Python (Guide)
+
+
+https://realpython.com/python-sockets/
+
+
+
+
+
+Socket Programming HOWTO
+Author:
+Gordon McMillan
+
+https://docs.python.org/3/howto/sockets.html
