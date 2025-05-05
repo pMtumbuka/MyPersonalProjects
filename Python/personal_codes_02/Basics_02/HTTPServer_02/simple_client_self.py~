@@ -1,0 +1,16 @@
+import urllib.request
+import urllib.parse
+
+url = "http://localhost:8090"
+
+data_to_be_sent = { "name": "Patrick Mtumbuka Munthali", "message": "Testing! Testing!" }
+
+encoded_data = urllib.parse.urlencode(data_to_be_sent).encode()
+
+request_to_be_sent = urllib.request.Request(url, data=encoded_data)#, method="POST")
+
+request_to_be_sent.add_header("Content-Type", "application/x-www-form-urlencoded")
+
+with urllib.request.urlopen(request_to_be_sent) as response_from_server:
+    response_text = response_from_server.read().decode()
+    print("Server's Response: \n", response_text)
