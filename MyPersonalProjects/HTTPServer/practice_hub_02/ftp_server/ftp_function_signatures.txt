@@ -1,0 +1,250 @@
+
+
+✅ From pyftpdlib.authorizers:
+
+
+	DummyAuthorizer
+
+	A class that handles user authentication and permissions.
+
+	class DummyAuthorizer(object):
+    		def __init__(self, allow_anonymous: bool = False)
+		def add_user(
+			self, 
+			username: str, 
+			password: str, 
+			homedir: str, 
+			perm: str = 'elr', 
+			msg_login: str = "Login successful.",
+			msg_quit: str = "Goodbye.
+			")
+    		def remove_user(self, username: str)
+	    	def validate_authentication(self, username: str, password: str, handler)
+    		def has_user(self, username: str) -> bool
+    		def impersonate_user(self, username: str, password: str)
+    		def terminate_impersonation(self, username: str)
+    		def get_home_dir(self, username: str) -> str
+    		def get_msg_login(self, username: str) -> str
+    		def get_msg_quit(self, username: str) -> str
+    		def get_perms(self, username: str) -> str
+    		def has_perm(self, username: str, perm: str) -> bool
+    		def override_perm(self, username: str, directory: str, perm: str)
+
+
+
+
+
+✅ From pyftpdlib.handlers:
+
+
+	FTPHandler
+
+	Handles an individual FTP session.
+
+	class FTPHandler(asynchat.async_chat):
+    		authorizer: AbstractAuthorizer
+    		banner: str = "pyftpdlib ready."
+    		passive_ports: Optional[range] = None
+    		masquerade_address: Optional[str] = None
+    		...
+
+
+
+
+
+✅ From pyftpdlib.servers:
+
+
+	FTPServer
+
+	Main server class that handles incoming connections and delegates them to handlers.
+
+	class FTPServer:
+    		def __init__(self, address: Tuple[str, int], handler: Type[FTPHandler])
+    		def serve_forever(self, timeout: Optional[float] = 1.0, blocking: bool = True)
+    		def close_all(self)
+
+
+
+
+
+✅ From logging (Python standard library):
+
+
+	basicConfig
+
+		Sets up the root logger.
+
+			def basicConfig(**kwargs) -> None
+
+		Usage (as in your code):
+
+			logging.basicConfig(level=logging.DEBUG)
+
+
+
+
+✅ Python built-in:
+
+
+	print()
+
+		Standard output function.
+
+		print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+
+
+
+
+
+🔧 Function Signatures from ftplib.FTP
+
+
+
+	1. FTP.__init__
+
+		def __init__(self, host='', user='', passwd='', acct='', timeout=None, source_address=None, encoding='utf-8'):
+
+		Creates an FTP client instance and optionally connects & logs in.
+
+
+
+	2. FTP.connect
+
+		def connect(self, host='', port=0, timeout=None, source_address=None):
+
+		Connects to the specified FTP server and port.
+
+
+
+	3. FTP.login
+
+		def login(self, user='', passwd='', acct=''):
+
+		Logs into the server using a username and password.
+
+
+
+	4. FTP.retrlines
+
+		def retrlines(self, cmd, callback=None):
+
+		Executes a command like LIST, and passes each line to the callback function (defaults to print).
+
+
+
+	5. FTP.retrbinary
+
+		def retrbinary(self, cmd, callback, blocksize=8192, rest=None):
+
+		Retrieves a file in binary mode. callback is usually a function like file.write.
+
+
+
+	6. FTP.storbinary
+
+		def storbinary(self, cmd, fp, blocksize=8192, callback=None, rest=None):
+
+		Uploads a file to the server in binary mode. fp is a file object opened in 'rb' mode.
+
+
+
+	7. FTP.quit
+
+		def quit(self):
+
+		Sends the QUIT command and closes the connection gracefully.
+
+
+
+
+
+ftp://newuser:newpass@127.0.0.1:9999/
+
+
+
+
+
+🔍 Directory and File Listing Methods
+
+
+	Method				Description
+
+	
+	ftp.dir()			Lists contents of a directory using a callback (like LIST).
+
+	ftp.nlst()			Returns a list of filenames in the current directory (like ls).
+
+	ftp.mlsd()			Returns structured directory listing (if the server supports MLSD).
+
+	ftp.cwd(path)			Change working directory.
+
+	ftp.pwd()			Print working directory.
+
+	ftp.retrlines('LIST')		Executes the LIST command and returns results line-by-line.
+
+
+
+
+
+
+📥 Downloading Files
+
+
+	Method					Description
+
+
+	ftp.retrbinary(cmd, callback)		Retrieve a file in binary mode (e.g. RETR filename).
+
+	ftp.retrlines(cmd, callback)		Retrieve a file in ASCII mode (e.g. for text files).
+
+
+
+
+
+
+📤 Uploading Files
+
+
+	Method				Description
+
+
+	ftp.storbinary(cmd, file)	Upload a file in binary mode (e.g. STOR filename).
+
+	ftp.storlines(cmd, file)	Upload a file in ASCII mode.
+
+
+
+
+
+🗂️ Directory & File Manipulation
+
+
+	Method					Description
+
+
+	ftp.mkd(dirname)			Make a directory.
+
+	ftp.rmd(dirname)			Remove a directory.
+
+	ftp.delete(filename)			Delete a file.
+
+	ftp.rename(fromname, toname)		Rename a file or directory.
+
+
+
+
+
+🔐 Connection/Login
+
+
+	Method					Description
+
+
+	ftp.connect(host, port=21)		Connect to the server.
+
+	ftp.login(user, passwd)			Log in to the server.
+
+	ftp.quit()				Close the FTP connection politely.
+
+	ftp.close()				Close the connection immediately.

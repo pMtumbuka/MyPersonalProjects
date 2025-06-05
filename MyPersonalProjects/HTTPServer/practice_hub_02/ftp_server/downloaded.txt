@@ -1,0 +1,288 @@
+✅ STEP 1: Install pyftpdlib
+
+
+
+	Command (Windows/Linux):
+
+		pip install pyftpdlib
+
+	Verify Installation:
+
+		pip show pyftpdlib
+
+
+
+
+	✅ Fix the Missing pip in Your Virtual Environment
+
+		Let’s install pip manually into your virtual environment.
+
+
+
+
+		✅ Step 1: Use the ensurepip module
+
+			.\venv\Scripts\python.exe -m ensurepip
+
+		
+
+		✅ Step 2: Install pyftpdlib into the venv
+
+			.\venv\Scripts\pip install pyftpdlib
+
+			.\venv\Scripts\pip3 install pyftpdlib
+
+			.\venv\Scripts\pip3.13 install pyftpdlib
+
+
+
+		✅ Step 3: Verify Installation
+
+			.\venv\Scripts\pip show pyftpdlib
+
+			.\venv\Scripts\pip3 show pyftpdlib
+
+			.\venv\Scripts\pip3.13 show pyftpdlib
+
+			Make sure the Location: path is something like:
+
+				C:\Users\mtumb\Documents\CodingEnv\Python\MyPersonalProjects\venv\Lib\site-packages
+
+
+		✅ Step 4: Run the FTP Server
+
+
+			python ftp_server_self_loop.py
+
+
+
+
+✅ STEP 2: Create and Run an FTP Server
+
+	python ftp_server.py
+
+
+
+
+✅ STEP 3: Connect Using a Client (Python)
+
+
+	You can use Python’s built-in ftplib as a client.
+
+
+		✅ Option 1: Use Python as an FTP Client
+
+			python ftp_client.py
+
+
+		
+		✅ Option 2: Use Command Line FTP Client
+
+			ftp 127.0.0.1 2121
+
+			Username: user
+			
+			Password: 12345
+
+			ftp> ls
+
+			ftp> bye
+
+
+		✅ Option 3: Use File Explorer (Windows Only)
+
+			ftp://user:12345@127.0.0.1:2121
+
+
+		Then try commands like:
+
+			ls
+			
+			get filename.txt
+
+			put test.txt
+
+			bye
+
+
+		✅ How to connect to a non-default port (2121) with Windows ftp:
+
+			(1.) Open Command Prompt:
+
+				ftp
+
+			(2.) Once inside the ftp prompt, use the open command with IP and port:
+
+				open 127.0.0.1 2121
+
+			(3.) Then you’ll see the server welcome message and get prompted for username:
+
+				User (127.0.0.1:(none)):
+
+
+
+
+✅ How to gracefully stop your FTP server
+
+
+	✅ Method 1: Press Ctrl+C multiple times
+
+	
+	C:\Windows\System32>taskkill /PID 8892 /F
+	
+	SUCCESS: The process with PID 8892 has been terminated.
+
+
+
+
+
+📁 What You Can Do Now
+
+
+	Here are some useful FTP commands you can try:
+
+
+		Command			Description
+
+		
+		ls or dir		List files and directories
+
+		cd <folder>		Change directory
+
+		get <file>		Download file from the server
+
+		put <file>		Upload file to the server
+
+		mget *			Download multiple files
+
+		mput *			Upload multiple files
+
+		delete <file>		Delete a file on the server
+
+		bye or quit		Close the FTP session
+
+
+
+
+
+(venv) C:\Users\mtumb\Documents\CodingEnv\Python\MyPersonalProjects\venv\Scripts>taskkill /PID 12232 /F
+
+SUCCESS: The process with PID 12232 has been terminated.
+
+
+
+
+
+📁 Using FTP in Windows File Explorer
+
+
+
+	✅ What You'll Need:
+
+
+		Your FTP server must be running.
+
+		You need your FTP credentials:
+
+			Username: user
+
+			Password: 12345
+
+			Address: 127.0.0.1
+
+			Port: 9999
+
+
+
+
+	🔧 Step-by-Step Instructions:
+
+		
+
+		🟢 Option 1: Using the FTP URL directly
+
+
+			Open File Explorer (Windows + E).
+
+			In the address bar at the top (not the search bar), enter:
+
+				ftp://user:12345@127.0.0.1:9999/
+				
+				Press Enter.
+
+
+
+	⚠️ If you see an error or blank screen:
+
+
+		Windows File Explorer does not support entering custom FTP ports directly in the address bar.
+
+			You’ll need to use Option 2 below to manually add a network location.
+
+
+
+
+		🟡 Option 2: Add FTP Server as a Network Location
+
+		
+			Open File Explorer.
+
+
+			Right-click on This PC in the sidebar and choose "Add a network location".
+
+
+				In the wizard:
+
+				Click Next.
+
+				Select "Choose a custom network location" → Next.
+
+
+				In the Internet or network address field, type:
+
+
+					ftp://127.0.0.1:9999
+
+					Don’t include username/password here.
+
+					Click Next.
+
+
+				It will prompt you for a username — enter:
+
+
+					user
+
+					Then check the box for "Log on anonymously" off.
+
+
+				When prompted for a password, enter:
+
+					12345
+
+
+				Click Next, give the location a name like:
+
+					My Local FTP Server
+
+				Click Finish.
+
+
+📂 You should now see your FTP server listed under "This PC" and be able to drag and drop files into it.
+
+	
+	⚠️ Important Notes:
+
+
+		Windows' built-in FTP client is read/write, but it's not great for large file uploads or folders — use FileZilla for heavy use.
+
+
+		You can only browse the directories that the FTP server allows (check the folder path in your Python script).
+
+
+		If you're accessing from another device, replace 127.0.0.1 with your local IP (e.g., 192.168.1.10).
+
+
+
+
+
